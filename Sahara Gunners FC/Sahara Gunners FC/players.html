@@ -1,0 +1,870 @@
+<!doctype html>
+<html lang="en" translate="no">
+<head>
+<meta charset="utf-8"/>
+<meta name="google" content="notranslate">
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+<meta name="description" content="Meet the Sahara Gunners FC squad — Buffalo's premier amateur football players for the 2025 season.">
+<meta name="keywords" content="Sahara Gunners, Sahara Gunners FC, Buffalo soccer, Buffalo football, amateur soccer Buffalo NY">
+<meta name="robots" content="index, follow">
+<title>Players — Sahara Gunners FC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0a0812;
+  --card: rgba(255,255,255,0.04);
+  --border: rgba(255,255,255,0.08);
+  --accent: #00e5ff;
+  --accent2: #ff6b35;
+  --gold: #f5c842;
+  --text: #f0eefc;
+  --muted: #7b7a96;
+  --nav-h: 72px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--text); font-family: 'Barlow', sans-serif; min-height: 100vh; overflow-x: hidden; }
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  background-size: 200px 200px; pointer-events: none; z-index: 0; opacity: 0.6;
+}
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 2px; }
+
+header {
+  position: fixed; top: 0; left: 0; right: 0; height: var(--nav-h); z-index: 100;
+  display: flex; align-items: center; justify-content: space-between; padding: 0 40px;
+  background: rgba(10,8,18,0.7); backdrop-filter: blur(24px); border-bottom: 1px solid var(--border);
+}
+.brand { display: flex; align-items: center; gap: 14px; cursor: pointer; text-decoration: none; }
+.brand-logo { width: 44px; height: 44px; border-radius: 50%; border: 2px solid var(--accent); box-shadow: 0 0 16px rgba(0,229,255,0.3); object-fit: cover; transition: box-shadow 0.3s; }
+.brand:hover .brand-logo { box-shadow: 0 0 28px rgba(0,229,255,0.6); }
+.brand-name { font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 2px; color: #fff; line-height: 1; }
+.brand-sub { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; letter-spacing: 3px; color: var(--accent); text-transform: uppercase; }
+.nav-divider { width: 1px; height: 32px; background: var(--border); margin: 0 8px; }
+.sponsor-nav img { height: 28px; width: auto; opacity: 0.8; transition: opacity 0.2s; cursor: pointer; }
+.sponsor-nav img:hover { opacity: 1; }
+nav.main-nav { display: flex; align-items: center; gap: 4px; }
+nav.main-nav a {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 600;
+  letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); text-decoration: none;
+  padding: 8px 14px; border-radius: 6px; transition: color 0.2s, background 0.2s;
+}
+nav.main-nav a:hover { color: var(--text); background: var(--card); }
+nav.main-nav a.active { color: var(--accent); background: var(--card); }
+.nav-live {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase;
+  background: linear-gradient(135deg, var(--accent2), #ff9a60);
+  color: #fff; border: none; padding: 8px 18px; border-radius: 6px;
+  cursor: pointer; display: flex; align-items: center; gap: 6px;
+  transition: transform 0.15s, box-shadow 0.2s; box-shadow: 0 0 20px rgba(255,107,53,0.35);
+}
+.nav-live:hover { transform: scale(1.04); box-shadow: 0 0 30px rgba(255,107,53,0.5); }
+.live-dot { width: 7px; height: 7px; background: #fff; border-radius: 50%; animation: pulse-dot 1.4s ease-in-out infinite; }
+@keyframes pulse-dot { 0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.4;transform:scale(0.7);} }
+.mobile-toggle { display: none; background: none; border: 1px solid var(--border); color: var(--text); font-size: 20px; padding: 6px 12px; border-radius: 6px; cursor: pointer; }
+.mobile-panel {
+  display: none; position: fixed; top: var(--nav-h); right: 0; left: 0;
+  background: rgba(10,8,18,0.97); backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border); padding: 20px; flex-direction: column; gap: 4px; z-index: 99;
+}
+.mobile-panel.open { display: flex; }
+.mobile-panel a, .mobile-panel button {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 600;
+  letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted);
+  text-decoration: none; background: none; border: none;
+  padding: 12px 16px; border-radius: 8px; text-align: left; cursor: pointer;
+  transition: color 0.2s, background 0.2s;
+}
+.mobile-panel a:hover, .mobile-panel button:hover { color: var(--accent); background: var(--card); }
+
+.page-hero { position: relative; padding: calc(var(--nav-h) + 80px) 60px 70px; overflow: hidden; }
+.page-hero-bg {
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 80% 10%, rgba(0,229,255,0.07) 0%, transparent 55%),
+              radial-gradient(ellipse at 10% 90%, rgba(255,107,53,0.04) 0%, transparent 50%);
+  pointer-events: none;
+}
+.page-hero-inner { position: relative; z-index: 1; max-width: 1200px; margin: 0 auto; }
+.page-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(0,229,255,0.1); border: 1px solid rgba(0,229,255,0.25);
+  color: var(--accent); font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase;
+  padding: 6px 14px; border-radius: 4px; margin-bottom: 20px; animation: fade-up 0.7s ease both;
+}
+.tag-dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; }
+.page-title {
+  font-family: 'Bebas Neue', sans-serif; font-size: clamp(56px, 7vw, 96px);
+  line-height: 0.92; letter-spacing: 2px; color: #fff;
+  animation: fade-up 0.7s 0.08s ease both; margin-bottom: 20px;
+}
+.page-title .accent-word { color: var(--accent); }
+.page-desc { font-size: 16px; font-weight: 300; line-height: 1.7; color: var(--muted); max-width: 480px; animation: fade-up 0.7s 0.16s ease both; }
+
+.filter-bar { position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; padding: 0 40px 40px; display: flex; gap: 8px; flex-wrap: wrap; }
+.filter-btn {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase; color: var(--muted); background: var(--card);
+  border: 1px solid var(--border); padding: 8px 18px; border-radius: 6px; cursor: pointer; transition: all 0.2s;
+}
+.filter-btn:hover, .filter-btn.active { color: var(--bg); background: var(--accent); border-color: var(--accent); }
+
+.divider-line { position: relative; z-index: 2; height: 1px; background: var(--border); margin: 0 40px; }
+
+.players-wrap { position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; padding: 50px 40px 80px; }
+.player-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+
+.player-card {
+  position: relative; background: var(--card); border: 1px solid var(--border);
+  border-radius: 18px; overflow: hidden; cursor: pointer;
+  transition: transform 0.25s, border-color 0.25s; animation: fade-up 0.5s ease both;
+}
+.player-card:hover { transform: translateY(-6px); border-color: rgba(0,229,255,0.3); }
+.player-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, var(--accent), transparent); opacity: 0; transition: opacity 0.3s;
+}
+.player-card:hover::before { opacity: 1; }
+
+/* Special card styles */
+.player-card.card-coach { border-color: rgba(245,200,66,0.2); }
+.player-card.card-coach::before { background: linear-gradient(90deg, var(--gold), transparent); }
+.player-card.card-coach:hover { border-color: rgba(245,200,66,0.5); }
+.player-card.card-mascot { border-color: rgba(255,107,53,0.2); }
+.player-card.card-mascot::before { background: linear-gradient(90deg, var(--accent2), transparent); }
+.player-card.card-mascot:hover { border-color: rgba(255,107,53,0.5); }
+
+.player-photo { position: relative; width: 100%; height: 220px; overflow: hidden; background: rgba(255,255,255,0.03); }
+.player-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform 0.4s ease; }
+.player-card:hover .player-photo img { transform: scale(1.07); }
+.player-photo-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 40%, rgba(10,8,18,0.9) 100%); }
+.player-number { position: absolute; top: 12px; right: 12px; font-family: 'Bebas Neue', sans-serif; font-size: 28px; line-height: 1; color: rgba(255,255,255,0.15); letter-spacing: 1px; }
+
+/* Badge on card */
+.player-badge {
+  position: absolute; top: 12px; left: 12px;
+  font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase; padding: 3px 8px; border-radius: 4px;
+}
+.badge-coach { background: rgba(245,200,66,0.2); color: var(--gold); border: 1px solid rgba(245,200,66,0.3); }
+.badge-mascot { background: rgba(255,107,53,0.2); color: var(--accent2); border: 1px solid rgba(255,107,53,0.3); }
+
+.player-body { padding: 16px 18px 20px; }
+.player-name { font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 700; letter-spacing: 0.5px; color: var(--text); margin-bottom: 4px; }
+.player-pos-row { display: flex; align-items: center; justify-content: space-between; }
+.player-position { font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); }
+.player-position.pos-coach { color: var(--gold); }
+.player-position.pos-mascot { color: var(--accent2); }
+.player-nat { font-size: 18px; }
+
+/* MODAL */
+.modal-overlay {
+  position: fixed; inset: 0; z-index: 200;
+  background: rgba(0,0,0,0.85); backdrop-filter: blur(16px);
+  display: none; align-items: center; justify-content: center; padding: 24px;
+  opacity: 0; transition: opacity 0.3s;
+}
+.modal-overlay.open { display: flex; }
+.modal-overlay.visible { opacity: 1; }
+.modal {
+  position: relative; background: #0f0d1c; border: 1px solid var(--border);
+  border-radius: 24px; width: 100%; max-width: 700px; overflow: hidden;
+  transform: translateY(20px) scale(0.97); transition: transform 0.3s;
+  max-height: 90vh; overflow-y: auto;
+}
+.modal-overlay.visible .modal { transform: translateY(0) scale(1); }
+.modal-close {
+  position: absolute; top: 20px; right: 20px; font-size: 22px; color: var(--muted);
+  background: rgba(255,255,255,0.06); border: 1px solid var(--border);
+  width: 36px; height: 36px; border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; transition: color 0.2s, border-color 0.2s; z-index: 10;
+}
+.modal-close:hover { color: var(--text); border-color: var(--accent); }
+.modal-banner {
+  position: relative; width: 100%; height: 220px; overflow: hidden;
+  background: linear-gradient(135deg, #0d0b1e, #1a1030);
+}
+.modal-banner img { width: 100%; height: 100%; object-fit: cover; object-position: top; opacity: 0.5; }
+.modal-banner-placeholder {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, rgba(0,229,255,0.08), rgba(255,107,53,0.06));
+}
+.modal-banner-placeholder-icon { font-size: 80px; opacity: 0.2; }
+.modal-banner-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 20%, #0f0d1c 100%); }
+.modal-number-bg { position: absolute; right: 30px; bottom: -10px; font-family: 'Bebas Neue', sans-serif; font-size: 120px; line-height: 1; color: rgba(255,255,255,0.06); letter-spacing: 4px; }
+.modal-body { padding: 0 32px 32px; }
+.modal-avatar {
+  width: 90px; height: 90px; border-radius: 50%;
+  border: 3px solid var(--accent); box-shadow: 0 0 24px rgba(0,229,255,0.3);
+  object-fit: cover; object-position: top;
+  margin-top: -45px; position: relative; z-index: 2; margin-bottom: 16px;
+}
+.modal-avatar-coach {
+  border-color: var(--gold); box-shadow: 0 0 24px rgba(245,200,66,0.3);
+}
+.modal-avatar-mascot {
+  border-color: var(--accent2); box-shadow: 0 0 24px rgba(255,107,53,0.3);
+}
+.modal-avatar-placeholder {
+  width: 90px; height: 90px; border-radius: 50%;
+  border: 3px solid var(--accent); box-shadow: 0 0 24px rgba(0,229,255,0.3);
+  background: linear-gradient(135deg, #1a1030, #0d0b1e);
+  display: flex; align-items: center; justify-content: center;
+  margin-top: -45px; position: relative; z-index: 2; margin-bottom: 16px;
+  font-size: 36px; flex-shrink: 0;
+}
+.modal-name { font-family: 'Bebas Neue', sans-serif; font-size: 40px; letter-spacing: 2px; color: #fff; line-height: 1; margin-bottom: 6px; }
+.modal-pos-row { display: flex; align-items: center; gap: 10px; margin-bottom: 24px; flex-wrap: wrap; }
+.modal-position {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 700;
+  letter-spacing: 3px; text-transform: uppercase; color: var(--accent);
+  background: rgba(0,229,255,0.1); border: 1px solid rgba(0,229,255,0.25); padding: 4px 12px; border-radius: 4px;
+}
+.modal-position.pos-coach { color: var(--gold); background: rgba(245,200,66,0.1); border-color: rgba(245,200,66,0.25); }
+.modal-position.pos-mascot { color: var(--accent2); background: rgba(255,107,53,0.1); border-color: rgba(255,107,53,0.25); }
+.modal-nationality { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; letter-spacing: 1px; color: var(--muted); display: flex; align-items: center; gap: 6px; }
+.modal-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 28px; }
+.stat-box { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 10px; text-align: center; }
+.stat-box-num { font-family: 'Bebas Neue', sans-serif; font-size: 28px; color: var(--gold); line-height: 1; margin-bottom: 4px; }
+.stat-box-label { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); }
+.modal-pitch { margin-bottom: 28px; }
+.modal-section-title {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700;
+  letter-spacing: 3px; text-transform: uppercase; color: var(--muted); margin-bottom: 14px;
+  display: flex; align-items: center; gap: 8px;
+}
+.modal-section-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+.pitch-svg { width: 100%; max-width: 340px; display: block; }
+.modal-bio { font-size: 14px; font-weight: 300; line-height: 1.8; color: var(--muted); }
+
+footer {
+  position: relative; z-index: 2; margin: 0 40px; padding: 28px 0;
+  border-top: 1px solid var(--border);
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+}
+.footer-brand { font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: 3px; color: var(--muted); }
+.footer-links { display: flex; gap: 20px; align-items: center; }
+.footer-links a { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; letter-spacing: 1px; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: var(--accent); }
+.footer-copy { font-size: 12px; color: var(--muted); font-family: 'Barlow Condensed', sans-serif; letter-spacing: 1px; }
+
+@keyframes fade-up { from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);} }
+
+@media (max-width: 1000px) { .player-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 700px) {
+  .player-grid { grid-template-columns: repeat(2, 1fr); }
+  .page-hero { padding: calc(var(--nav-h) + 40px) 24px 40px; }
+  .players-wrap { padding: 30px 20px 60px; }
+  .filter-bar { padding: 0 20px 30px; }
+  nav.main-nav { display: none; }
+  .mobile-toggle { display: flex; }
+  .sponsor-nav, .nav-divider { display: none; }
+  header { padding: 0 20px; }
+  .divider-line { margin: 0 20px; }
+  footer { margin: 0 20px; }
+  .modal-stats { grid-template-columns: repeat(2, 1fr); }
+  .modal-body { padding: 0 20px 24px; }
+}
+@media (max-width: 400px) { .player-grid { grid-template-columns: 1fr; } }
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KDMVY7QSPF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KDMVY7QSPF');
+</script>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+
+<header>
+  <a class="brand" href="index.html">
+    <img class="brand-logo" src="https://i.ibb.co/Fq0yCBwB/IMG-3678.png" alt="Sahara Gunners">
+    <div>
+      <div class="brand-name">Sahara Gunners</div>
+      <div class="brand-sub">Football Club</div>
+    </div>
+  </a>
+  <div style="display:flex;align-items:center;gap:8px;margin-right:auto;margin-left:20px;">
+    <div class="nav-divider"></div>
+    <div class="sponsor-nav" onclick="location.href='sponsors.html'" style="cursor:pointer;">
+      <img src="https://i.ibb.co/3Y0Qff5q/IMG-3717.png" alt="Sponsor">
+    </div>
+  </div>
+  <nav class="main-nav">
+    <a href="players.html" class="active">Players</a>
+    <a href="announcements.html">Announcements</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About</a>
+    <a href="sponsors.html">Sponsors</a>
+    <a href="ourteam.html">Our Team</a>
+    <button class="nav-live" onclick="location.href='live.html'">
+      <span class="live-dot"></span> Live
+    </button>
+  </nav>
+  <button class="mobile-toggle" id="mobileToggle">&#9776;</button>
+</header>
+
+<div class="mobile-panel" id="mobilePanel">
+  <a href="players.html">Players</a>
+  <a href="announcements.html">Announcements</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="about.html">About</a>
+  <a href="sponsors.html">Sponsors</a>
+  <a href="ourteam.html">Our Team</a>
+  <button onclick="location.href='live.html'" style="color:#fff;background:var(--accent2);padding:12px;border-radius:8px;border:none;cursor:pointer;font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;letter-spacing:2px;">&#9889; LIVE</button>
+</div>
+
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-inner">
+    <div class="page-tag"><span class="tag-dot"></span> Active Squad &middot; 2025</div>
+    <h1 class="page-title">PLAYER<br><span class="accent-word">ROSTER</span></h1>
+    <p class="page-desc">Meet the talented athletes representing Buffalo and Sahara Gunners FC on the pitch.</p>
+  </div>
+</section>
+
+<div class="filter-bar">
+  <button class="filter-btn active" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="Forward">Forwards</button>
+  <button class="filter-btn" data-filter="Midfielder">Midfielders</button>
+  <button class="filter-btn" data-filter="Defender">Defenders</button>
+  <button class="filter-btn" data-filter="Goalkeeper">Goalkeepers</button>
+  <button class="filter-btn" data-filter="Head Coach">Coaches</button>
+  <button class="filter-btn" data-filter="Mascot">Mascot</button>
+</div>
+
+<div class="divider-line"></div>
+
+<div class="players-wrap">
+  <div class="player-grid" id="playerGrid"></div>
+</div>
+
+<footer>
+  <div class="footer-brand">Sahara Gunners FC</div>
+  <div class="footer-links">
+    <a href="ourteam.html">Editor: M. Bijjo</a>
+    <a href="/cdn-cgi/l/email-protection#3558405d5458585051575c04040c755258545c591b565a58">Email</a>
+    <a href="https://www.instagram.com/m.bijjo" target="_blank">Instagram</a>
+  </div>
+  <div class="footer-copy">&copy; <span id="year"></span> Sahara Gunners &mdash; All rights reserved.</div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" id="modal">
+    <button class="modal-close" id="modalClose">&#10005;</button>
+    <div class="modal-banner" id="modalBanner"></div>
+    <div class="modal-body">
+      <div id="modal-avatar-wrap"></div>
+      <div class="modal-name" id="modal-name"></div>
+      <div class="modal-pos-row">
+        <div class="modal-position" id="modal-position"></div>
+        <div class="modal-nationality" id="modal-nationality"></div>
+      </div>
+      <div class="modal-stats" id="modal-stats"></div>
+      <div class="modal-pitch" id="modal-pitch-section">
+        <div class="modal-section-title">Position on Pitch</div>
+        <svg class="pitch-svg" viewBox="0 0 340 220" xmlns="http://www.w3.org/2000/svg">
+          <rect width="340" height="220" rx="6" fill="#0d2010"/>
+          <rect x="10" y="10" width="320" height="200" rx="4" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+          <line x1="170" y1="10" x2="170" y2="210" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+          <circle cx="170" cy="110" r="30" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+          <circle cx="170" cy="110" r="2" fill="rgba(255,255,255,0.3)"/>
+          <rect x="10" y="60" width="70" height="100" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+          <rect x="260" y="60" width="70" height="100" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+          <rect x="10" y="85" width="30" height="50" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+          <rect x="300" y="85" width="30" height="50" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+          <circle id="pitch-dot" cx="170" cy="110" r="8" fill="#00e5ff" opacity="0.9"/>
+          <circle id="pitch-dot-pulse" cx="170" cy="110" r="14" fill="none" stroke="#00e5ff" stroke-width="1.5" opacity="0.4"/>
+        </svg>
+      </div>
+      <div class="modal-pitch">
+        <div class="modal-section-title">About</div>
+        <p class="modal-bio" id="modal-bio"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+var players = [
+  // ── GOALKEEPERS ──
+  {
+    name: "Kevin Williams",
+    number: 1,
+    position: "Goalkeeper",
+    posGroup: "Goalkeeper",
+    nationality: "USA",
+    img: "Player/Kevin-Williams-1-Goalkeeper.png",
+    hasPhoto: true,
+    cardClass: "",
+    stats: { goals: '-', assists: '-', matches: '-', rating: '-' },
+    pitchX: 22, pitchY: 110,
+    bio: "Kevin is the reliable last line of defense, commanding the penalty area with authority and confidence."
+  },
+  {
+    name: "Connor Russell",
+    number: 0,
+    position: "Goalkeeper",
+    posGroup: "Goalkeeper",
+    nationality: "USA",
+    img: "Player/Connor-Russell-0-Goalkeeper.png",
+    hasPhoto: true,
+    cardClass: "",
+    stats: { goals: '-', assists: '-', matches: '-', rating: '-' },
+    pitchX: 22, pitchY: 110,
+    bio: "Connor is a commanding goalkeeper, organizing the defense and making key saves when it matters most."
+  },
+
+  // ── DEFENDERS ──
+  {
+    name: "Joshua Palmgreen",
+    number: 4,
+    position: "Defender",
+    posGroup: "Defender",
+    nationality: "USA",
+    img: "Player/Joshua-Palmgreen-4-Defender.png",
+    hasPhoto: true,
+    cardClass: "",
+    stats: { goals: '-', assists: '-', matches: '-', rating: '-' },
+    pitchX: 80, pitchY: 80,
+    bio: "Joshua is a composed defender who reads the game well and supports the team both defensively and offensively."
+  },
+  {
+    name: "Ivan Wangue",
+    number: 11,
+    position: "Defender",
+    posGroup: "Defender",
+    nationality: "USA",
+    img: "Player/Ivan-Wangue-11-Defender.png",
+    hasPhoto: true,
+    cardClass: "",
+    stats: { goals: '-', assists: '-', matches: '-', rating: '-' },
+    pitchX: 80, pitchY: 110,
+    bio: "Ivan is athletic and tenacious, bringing pace and intensity to the defensive line."
+  },
+  {
+    name: "Quendirus Davis",
+    number: 12,
+    position: "Defender",
+    posGroup: "Defender",
+    nationality: "USA",
+    img: "Player/Quendirus-Davis-12-Defender.png",
+    hasPhoto: true,
+    cardClass: "",
+    stats: { goals: '-', assists: '-', matches: '-', rating: '-' },
+    pitchX: 90, pitchY: 150,
+    bio: "Quendirus brings physicality and determination to the backline, making him a tough opponent to beat."
+  },
+  {
+    name: "Maurice Channer",
+    number: 22,
+    position: "Defender",
+    posGroup: "Defender",
+    nationality: "USA",
+    img: "Player/Maurice-Channer-22-Defender.png",
+    hasPhoto: true,
+    cardClass: "",
+    stats: { goals: '-', assists: '-', matches: '-', rating: '-' },
+    pitchX: 80, pitchY: 160,
+    bio: "Maurice is a strong and physical defender who brings solidity and discipline to the Sahara Gunners backline."
+  },
+  {
+    name: "Holden Kelly",
+    number: 28,
+    position: "Defender",
+    posGroup: "Defender",
+    nationality: "USA",
+    img: "Player/Holden-Kelly-28-Defender.png",
+    hasPhoto: true,
+    cardClass: "",
+    stats: { goals: '-', assists: '-', matches: '-', rating: '-' },
+    pitchX: 80, pitchY: 60,
+    bio: "Holden is a composed defender who brings calm authority and aerial strength to the backline."
+  },
+
+  // ── MIDFIELDERS ──
+  {
+    name: "Ryan Curtis",
+    number: 2,
+    position: "Midfielder",
+    posGroup: "Midfielder",
+    nationality: "USA",
+    img: "Player/Ryan-Curtis-2-Midfielder.png",
+    hasPhoto: true,
+    cardClass: "",
+    stats: { goals: '-', assists: '-', matches: '-', rating: '-' },
+    pitchX: 140, pitchY: 70,
+    bio: "Ryan is a hardworking midfielder with great stamina, capable of contributing both in defense and attack."
+  },
+  {
+    name: "Juanjo Menendez",
+    number: 9,
+    position: "Midfielder",
+    posGroup: "Midfielder",
+    nationality: "USA",
+    img: "Player/Juanjo-Menendez-9-Midfielder.png",
+    hasPhoto: true,
+    cardClass: "",
+    stats: { goals: '-', assists: '-', matches: '-', rating: '-' },
+    pitchX: 170, pitchY: 80,
+    bio: "Juanjo is a technically gifted midfielder, capable of controlling the tempo and creating chances for teammates."
+  },
+  {
+    name: "Mohammad Bakkar",
+    number: 17,
+    position: "Midfielder",
+    posGroup: "Midfielder",
+    nationality: "USA",
+    img: "Player/Mohammad-Bakkar-17-Midfielder.png",
+    hasPhoto: true,
+    cardClass: "",
+    stats: { goals: '-', assists: '-', matches: '-', rating: '-' },
+    pitchX: 210, pitchY: 70,
+    bio: "Mohammad is a creative midfielder, known for his passing accuracy and vision to unlock defenses."
+  },
+  {
+    name: "Solomon Bonane",
+    number: 20,
+    position: "Midfielder",
+    posGroup: "Midfielder",
+    nationality: "USA",
+    img: "Player/Solomon-Bonane-20-Midfielder.png",
+    hasPhoto: true,
+    cardClass: "",
+    stats: { goals: '-', assists: '-', matches: '-', rating: '-' },
+    pitchX: 170, pitchY: 140,
+    bio: "Solomon is a dynamic and energetic midfielder who covers ground relentlessly and links the play."
+  },
+  {
+    name: "Wasim Ahmad",
+    number: 21,
+    position: "Midfielder",
+    posGroup: "Midfielder",
+    nationality: "USA",
+    img: "Player/Wasim-Ahmad-21-Midfielder.png",
+    hasPhoto: true,
+    cardClass: "",
+    stats: { goals: '-', assists: '-', matches: '-', rating: '-' },
+    pitchX: 200, pitchY: 150,
+    bio: "Wasim is a box-to-box midfielder with excellent technical ability and a nose for goal from midfield."
+  },
+  {
+    name: "Mason Wandtke",
+    number: 23,
+    position: "Midfielder",
+    posGroup: "Midfielder",
+    nationality: "USA",
+    img: "Player/Mason-Wandtke-23-Midfielder.png",
+    hasPhoto: true,
+    cardClass: "",
+    stats: { goals: '-', assists: '-', matches: '-', rating: '-' },
+    pitchX: 210, pitchY: 150,
+    bio: "Mason is a versatile midfielder who contributes both defensively and offensively with great energy."
+  },
+  {
+    name: "Christian Martinez",
+    number: 3,
+    position: "Midfielder",
+    posGroup: "Midfielder",
+    nationality: "USA",
+    img: "Player/Christian-Martinez-3-Midfielder.png",
+    hasPhoto: true,
+    cardClass: "",
+    stats: { goals: '-', assists: '-', matches: '-', rating: '-' },
+    pitchX: 140, pitchY: 150,
+    bio: "Christian is a reliable central midfielder who keeps the team organized and distributes the ball efficiently."
+  },
+  {
+    name: "Ali Hassain",
+    number: 13,
+    position: "Midfielder",
+    posGroup: "Midfielder",
+    nationality: "USA",
+    img: "Player/Ali-Hassain-13-Midfielder.png",
+    hasPhoto: true,
+    cardClass: "",
+    stats: { goals: '-', assists: '-', matches: '-', rating: '-' },
+    pitchX: 170, pitchY: 110,
+    bio: "Ali is a creative and technical midfielder with the ability to change the game with a single pass or dribble."
+  },
+
+  // ── FORWARDS ──
+  {
+    name: "Ali Shawish",
+    number: 7,
+    position: "Forward",
+    posGroup: "Forward",
+    nationality: "USA",
+    img: "Player/Ali-Shawish-7-Forward.png",
+    hasPhoto: true,
+    cardClass: "",
+    stats: { goals: '-', assists: '-', matches: '-', rating: '-' },
+    pitchX: 270, pitchY: 70,
+    bio: "Ali is a speedy winger with excellent dribbling, always dangerous when running at defenders one-on-one."
+  },
+  {
+    name: "Kovan Dalil",
+    number: 10,
+    position: "Forward",
+    posGroup: "Forward",
+    nationality: "USA",
+    img: "Player/Kovan-Dalil-10-Forward.png",
+    hasPhoto: true,
+    cardClass: "",
+    stats: { goals: '-', assists: '-', matches: '-', rating: '-' },
+    pitchX: 290, pitchY: 110,
+    bio: "Kovan is the founder and captain of Sahara Gunners FC, leading the team with skill, vision and passion."
+  },
+  {
+    name: "Douglass Tshibuyi",
+    number: 19,
+    position: "Forward",
+    posGroup: "Forward",
+    nationality: "USA",
+    img: "Player/Douglass-Tshibuyi-19-Forward.png",
+    hasPhoto: true,
+    cardClass: "",
+    stats: { goals: '-', assists: '-', matches: '-', rating: '-' },
+    pitchX: 290, pitchY: 110,
+    bio: "Douglass is a powerful forward with great finishing ability and relentless movement off the ball."
+  },
+  {
+    name: "Noorideen Muzaid",
+    number: 26,
+    position: "Forward",
+    posGroup: "Forward",
+    nationality: "USA",
+    img: "Player/Noorideen-Muzaid-Omar-26-Forward.png",
+    hasPhoto: true,
+    cardClass: "",
+    stats: { goals: '-', assists: '-', matches: '-', rating: '-' },
+    pitchX: 290, pitchY: 80,
+    bio: "Noorideen is a quick and skillful forward with an eye for goal. His pace and movement make him a constant threat."
+  },
+  {
+    name: "Bryan Wolanski",
+    number: 25,
+    position: "Forward",
+    posGroup: "Forward",
+    nationality: "USA",
+    img: "Player/Bryan-Wolanski-25-Forward.png",
+    hasPhoto: true,
+    cardClass: "",
+    stats: { goals: '-', assists: '-', matches: '-', rating: '-' },
+    pitchX: 270, pitchY: 150,
+    bio: "Bryan is an energetic forward who presses hard and creates space for teammates with intelligent runs."
+  },
+  {
+    name: "Jayston Tonnelle",
+    number: 30,
+    position: "Forward",
+    posGroup: "Forward",
+    nationality: "USA",
+    img: "Player/Jayston-Tonnelle-30-Forward.png",
+    hasPhoto: true,
+    cardClass: "",
+    stats: { goals: '-', assists: '-', matches: '-', rating: '-' },
+    pitchX: 310, pitchY: 140,
+    bio: "Jayston is a dynamic forward, always looking to make runs behind the defense and finish clinically."
+  },
+
+  // ── COACHING STAFF ──
+  {
+    name: "Tim Palmgreen",
+    number: null,
+    position: "Head Coach",
+    posGroup: "Head Coach",
+    nationality: "USA",
+    img: "Player/Tim-Palmgreen-Coach.png",
+    hasPhoto: true,
+    cardClass: "card-coach",
+    stats: null,
+    pitchX: null, pitchY: null,
+    bio: "Tim Palmgreen serves as Head Coach of Sahara Gunners FC, bringing tactical knowledge and leadership to guide the squad."
+  },
+  {
+    name: "Richard Russell",
+    number: null,
+    position: "Head Coach",
+    posGroup: "Head Coach",
+    nationality: "USA",
+    img: "Player/Richard-Russell-Coach.png",
+    hasPhoto: true,
+    cardClass: "card-coach",
+    stats: null,
+    pitchX: null, pitchY: null,
+    bio: "Richard Russell is a dedicated coach who works closely with the players to develop their skills and team cohesion."
+  },
+
+  // ── MASCOT ──
+  {
+    name: "Blaze",
+    number: null,
+    position: "Mascot",
+    posGroup: "Mascot",
+    nationality: "USA",
+    img: "Player/Blaze-Mascot.png",
+    hasPhoto: true,
+    cardClass: "card-mascot",
+    stats: null,
+    pitchX: null, pitchY: null,
+    bio: "Blaze is the official mascot of Sahara Gunners FC, bringing energy and spirit to every match day."
+  }
+];
+
+function renderCards(filter) {
+  var grid = document.getElementById('playerGrid');
+  grid.innerHTML = '';
+  var filtered = filter === 'all' ? players : players.filter(function(p){ return p.posGroup === filter; });
+  filtered.forEach(function(p, i) {
+    var card = document.createElement('div');
+    card.className = 'player-card' + (p.cardClass ? ' ' + p.cardClass : '');
+    card.style.animationDelay = (i * 0.06) + 's';
+
+    var badgeHTML = '';
+    if (p.posGroup === 'Head Coach') badgeHTML = '<div class="player-badge badge-coach">Coach</div>';
+    if (p.posGroup === 'Mascot') badgeHTML = '<div class="player-badge badge-mascot">Mascot</div>';
+
+    var photoHTML = '';
+    if (p.hasPhoto) {
+      photoHTML = '<div class="player-photo">'
+        + '<img src="' + p.img + '" alt="' + p.name + '">'
+        + '<div class="player-photo-overlay"></div>'
+        + badgeHTML
+        + (p.number !== null ? '<div class="player-number">#' + p.number + '</div>' : '')
+        + '</div>';
+    } else {
+      photoHTML = '<div class="player-photo"><div class="player-photo-placeholder"><div class="placeholder-icon">&#9917;</div><div class="placeholder-text">No Photo</div></div>'
+        + badgeHTML
+        + (p.number !== null ? '<div class="player-number" style="position:absolute;top:12px;right:12px;">#' + p.number + '</div>' : '')
+        + '</div>';
+    }
+
+    var posClass = p.posGroup === 'Head Coach' ? 'player-position pos-coach' : p.posGroup === 'Mascot' ? 'player-position pos-mascot' : 'player-position';
+
+    card.innerHTML = photoHTML
+      + '<div class="player-body">'
+      + '<div class="player-name">' + p.name + '</div>'
+      + '<div class="player-pos-row">'
+      + '<div class="' + posClass + '">' + p.position + '</div>'
+      + '<div class="player-nat">&#127482;&#127480;</div>'
+      + '</div></div>';
+
+    card.addEventListener('click', function(){ openModal(p); });
+    grid.appendChild(card);
+  });
+}
+renderCards('all');
+
+document.querySelectorAll('.filter-btn').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('.filter-btn').forEach(function(b){ b.classList.remove('active'); });
+    btn.classList.add('active');
+    renderCards(btn.dataset.filter);
+  });
+});
+
+var overlay = document.getElementById('modalOverlay');
+var modalClose = document.getElementById('modalClose');
+
+function openModal(p) {
+  var isCoach = p.posGroup === 'Head Coach';
+  var isMascot = p.posGroup === 'Mascot';
+
+  // Banner
+  var banner = document.getElementById('modalBanner');
+  if (p.hasPhoto) {
+    banner.innerHTML = '<img src="' + p.img + '" alt="' + p.name + '"><div class="modal-banner-overlay"></div>'
+      + (p.number !== null ? '<div class="modal-number-bg">#' + p.number + '</div>' : '<div class="modal-number-bg">' + p.name.split(' ')[0].toUpperCase() + '</div>');
+  } else {
+    banner.innerHTML = '<div class="modal-banner-placeholder"><div class="modal-banner-placeholder-icon">&#9917;</div></div><div class="modal-banner-overlay"></div>';
+  }
+
+  // Avatar
+  var avatarWrap = document.getElementById('modal-avatar-wrap');
+  var extraClass = isCoach ? ' modal-avatar-coach' : isMascot ? ' modal-avatar-mascot' : '';
+  if (p.hasPhoto) {
+    avatarWrap.innerHTML = '<img class="modal-avatar' + extraClass + '" src="' + p.img + '" alt="' + p.name + '">';
+  } else {
+    avatarWrap.innerHTML = '<div class="modal-avatar-placeholder">&#9917;</div>';
+  }
+
+  document.getElementById('modal-name').textContent = p.name;
+
+  var posEl = document.getElementById('modal-position');
+  posEl.textContent = p.position;
+  posEl.className = 'modal-position' + (isCoach ? ' pos-coach' : isMascot ? ' pos-mascot' : '');
+
+  document.getElementById('modal-nationality').textContent = '🇺🇸 ' + p.nationality;
+  document.getElementById('modal-bio').textContent = p.bio;
+
+  // Stats
+  var statsEl = document.getElementById('modal-stats');
+  if (p.stats) {
+    statsEl.style.display = 'grid';
+    statsEl.innerHTML =
+      '<div class="stat-box"><div class="stat-box-num">' + p.stats.goals + '</div><div class="stat-box-label">Goals</div></div>' +
+      '<div class="stat-box"><div class="stat-box-num">' + p.stats.assists + '</div><div class="stat-box-label">Assists</div></div>' +
+      '<div class="stat-box"><div class="stat-box-num">' + p.stats.matches + '</div><div class="stat-box-label">Matches</div></div>' +
+      '<div class="stat-box"><div class="stat-box-num">' + p.stats.rating + '</div><div class="stat-box-label">Rating</div></div>';
+  } else {
+    statsEl.style.display = 'none';
+    statsEl.innerHTML = '';
+  }
+
+  // Pitch
+  var pitchSection = document.getElementById('modal-pitch-section');
+  if (p.pitchX !== null && p.pitchX !== undefined) {
+    pitchSection.style.display = 'block';
+    document.getElementById('pitch-dot').setAttribute('cx', p.pitchX);
+    document.getElementById('pitch-dot').setAttribute('cy', p.pitchY);
+    document.getElementById('pitch-dot-pulse').setAttribute('cx', p.pitchX);
+    document.getElementById('pitch-dot-pulse').setAttribute('cy', p.pitchY);
+  } else {
+    pitchSection.style.display = 'none';
+  }
+
+  overlay.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+  requestAnimationFrame(function(){ overlay.classList.add('visible'); });
+}
+
+function closeModal() {
+  overlay.classList.remove('visible');
+  setTimeout(function(){
+    overlay.style.display = 'none';
+    document.body.style.overflow = '';
+  }, 300);
+}
+
+modalClose.addEventListener('click', closeModal);
+overlay.addEventListener('click', function(e){ if (e.target === overlay) closeModal(); });
+document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeModal(); });
+
+
+
+var mobileToggle = document.getElementById('mobileToggle');
+var mobilePanel = document.getElementById('mobilePanel');
+mobileToggle.addEventListener('click', function() {
+  mobilePanel.classList.toggle('open');
+  mobileToggle.textContent = mobilePanel.classList.contains('open') ? 'X' : '☰';
+});
+</script>
+</body>
+</html>

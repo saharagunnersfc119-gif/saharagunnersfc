@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="en" translate="no">
+<head>
+<meta charset="utf-8"/>
+<meta name="google" content="notranslate">
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+<meta name="description" content="Photos and highlights from Sahara Gunners FC matches and events in Buffalo NY.">
+<meta name="keywords" content="Sahara Gunners, Sahara Gunners FC, Buffalo soccer, Buffalo football, amateur soccer Buffalo NY">
+<meta name="robots" content="index, follow">
+<title>Gallery — Sahara Gunners FC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0a0812;
+  --surface: #110f1e;
+  --card: rgba(255,255,255,0.04);
+  --border: rgba(255,255,255,0.08);
+  --accent: #00e5ff;
+  --accent2: #ff6b35;
+  --gold: #f5c842;
+  --text: #f0eefc;
+  --muted: #7b7a96;
+  --nav-h: 72px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Barlow', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.6;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 2px; }
+
+/* ─── NAV ─── */
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--nav-h);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  background: rgba(10,8,18,0.7);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid var(--border);
+}
+.brand {
+  display: flex; align-items: center; gap: 14px;
+  cursor: pointer; text-decoration: none;
+}
+.brand-logo {
+  width: 44px; height: 44px; border-radius: 50%;
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 16px rgba(0,229,255,0.3);
+  object-fit: cover; transition: box-shadow 0.3s;
+}
+.brand:hover .brand-logo { box-shadow: 0 0 28px rgba(0,229,255,0.6); }
+.brand-text { display: flex; flex-direction: column; }
+.brand-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px; letter-spacing: 2px; color: #fff; line-height: 1;
+}
+.brand-sub {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px; letter-spacing: 3px; color: var(--accent); text-transform: uppercase;
+}
+.nav-divider { width: 1px; height: 32px; background: var(--border); margin: 0 8px; }
+.sponsor-nav img { height: 28px; width: auto; opacity: 0.8; transition: opacity 0.2s; cursor: pointer; }
+.sponsor-nav img:hover { opacity: 1; }
+
+nav.main-nav { display: flex; align-items: center; gap: 4px; }
+nav.main-nav a {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--muted); text-decoration: none;
+  padding: 8px 14px; border-radius: 6px; transition: color 0.2s, background 0.2s;
+}
+nav.main-nav a:hover { color: var(--text); background: var(--card); }
+nav.main-nav a.active { color: var(--accent); background: var(--card); }
+
+.nav-live {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+  background: linear-gradient(135deg, var(--accent2), #ff9a60);
+  color: #fff; border: none; padding: 8px 18px; border-radius: 6px;
+  cursor: pointer; display: flex; align-items: center; gap: 6px;
+  transition: transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 0 20px rgba(255,107,53,0.35);
+}
+.nav-live:hover { transform: scale(1.04); box-shadow: 0 0 30px rgba(255,107,53,0.5); }
+.live-dot {
+  width: 7px; height: 7px; background: #fff; border-radius: 50%;
+  animation: pulse-dot 1.4s ease-in-out infinite;
+}
+@keyframes pulse-dot {
+  0%,100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.7); }
+}
+
+.mobile-toggle {
+  display: none; background: none;
+  border: 1px solid var(--border); color: var(--text);
+  font-size: 20px; padding: 6px 12px; border-radius: 6px; cursor: pointer;
+}
+.mobile-panel {
+  display: none; position: fixed;
+  top: var(--nav-h); right: 0; left: 0;
+  background: rgba(10,8,18,0.97); backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  padding: 20px; flex-direction: column; gap: 4px; z-index: 99;
+}
+.mobile-panel.open { display: flex; }
+.mobile-panel a, .mobile-panel button {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 18px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--muted); text-decoration: none; background: none; border: none;
+  padding: 12px 16px; border-radius: 8px; text-align: left; cursor: pointer;
+  transition: color 0.2s, background 0.2s;
+}
+.mobile-panel a:hover, .mobile-panel button:hover { color: var(--accent); background: var(--card); }
+
+/* ─── PAGE HERO ─── */
+.page-hero {
+  position: relative;
+  padding: calc(var(--nav-h) + 80px) 60px 70px;
+  overflow: hidden;
+}
+.page-hero-bg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at 70% 0%, rgba(0,229,255,0.07) 0%, transparent 55%),
+    radial-gradient(ellipse at 20% 100%, rgba(255,107,53,0.04) 0%, transparent 50%);
+  pointer-events: none;
+}
+.page-hero-inner {
+  position: relative; z-index: 1;
+  max-width: 1200px; margin: 0 auto;
+  display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 24px;
+}
+.page-hero-left {}
+.page-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(0,229,255,0.1); border: 1px solid rgba(0,229,255,0.25);
+  color: var(--accent); font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase;
+  padding: 6px 14px; border-radius: 4px; margin-bottom: 20px;
+  animation: fade-up 0.7s ease both;
+}
+.tag-dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; }
+.page-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(56px, 7vw, 96px);
+  line-height: 0.92; letter-spacing: 2px; color: #fff;
+  animation: fade-up 0.7s 0.08s ease both; margin-bottom: 20px;
+}
+.page-title .accent-word { color: var(--accent); }
+.page-title .stroke-word {
+  -webkit-text-stroke: 2px rgba(255,255,255,0.35); color: transparent;
+}
+.page-desc {
+  font-size: 16px; font-weight: 300; line-height: 1.7; color: var(--muted);
+  max-width: 420px; animation: fade-up 0.7s 0.16s ease both;
+}
+
+.photo-count {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 60px; color: rgba(255,255,255,0.06);
+  letter-spacing: 4px; line-height: 1;
+  animation: fade-up 0.7s 0.2s ease both;
+  align-self: flex-end;
+}
+
+/* ─── DIVIDER ─── */
+.divider-line {
+  position: relative; z-index: 2;
+  height: 1px; background: var(--border); margin: 0 40px;
+}
+
+/* ─── GALLERY ─── */
+.gallery-wrap {
+  position: relative; z-index: 2;
+  max-width: 1200px; margin: 0 auto;
+  padding: 60px 40px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+/* Make some cards span wider for visual interest */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  cursor: pointer;
+  aspect-ratio: 4/3;
+  transition: border-color 0.25s, transform 0.25s;
+}
+.gallery-item:hover { border-color: rgba(0,229,255,0.35); transform: scale(1.02); z-index: 2; }
+.gallery-item:nth-child(1) { grid-column: span 2; grid-row: span 2; aspect-ratio: auto; }
+.gallery-item:nth-child(7) { grid-column: span 2; }
+
+.gallery-item img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.4s ease;
+  display: block;
+}
+.gallery-item:hover img { transform: scale(1.07); }
+
+.gallery-item-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(10,8,18,0.7) 0%, transparent 50%);
+  opacity: 0; transition: opacity 0.3s;
+  display: flex; align-items: flex-end; padding: 14px;
+}
+.gallery-item:hover .gallery-item-overlay { opacity: 1; }
+.overlay-icon {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--accent); display: flex; align-items: center; gap: 6px;
+}
+.overlay-icon::before {
+  content: '';
+  width: 16px; height: 16px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2300e5ff' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7'/%3E%3C/svg%3E") center/contain no-repeat;
+}
+
+/* ─── LIGHTBOX ─── */
+#lightbox {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.95);
+  display: none; justify-content: center; align-items: center;
+  z-index: 200; padding: 24px;
+  backdrop-filter: blur(10px);
+}
+#lightbox.show { display: flex; }
+
+.lb-inner {
+  position: relative;
+  max-width: 90vw; max-height: 90vh;
+  display: flex; align-items: center; justify-content: center;
+}
+#lightbox img {
+  max-width: 100%; max-height: 85vh;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  box-shadow: 0 0 60px rgba(0,0,0,0.8);
+  transition: transform 0.3s;
+  cursor: zoom-in;
+}
+#lightbox img.zoomed { transform: scale(1.6); cursor: zoom-out; }
+
+.lb-close {
+  position: fixed; top: 24px; right: 28px;
+  font-size: 28px; color: var(--muted);
+  cursor: pointer; background: none; border: none;
+  transition: color 0.2s; line-height: 1;
+}
+.lb-close:hover { color: var(--accent); }
+
+.lb-nav {
+  position: fixed; top: 50%; transform: translateY(-50%);
+  font-size: 32px; color: var(--muted);
+  cursor: pointer; background: rgba(10,8,18,0.7);
+  border: 1px solid var(--border); border-radius: 8px;
+  width: 48px; height: 48px;
+  display: flex; align-items: center; justify-content: center;
+  transition: color 0.2s, border-color 0.2s;
+}
+.lb-nav:hover { color: var(--accent); border-color: var(--accent); }
+.lb-prev { left: 16px; }
+.lb-next { right: 16px; }
+
+.lb-counter {
+  position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ─── FOOTER ─── */
+footer {
+  position: relative; z-index: 2;
+  margin: 0 40px; padding: 28px 0;
+  border-top: 1px solid var(--border);
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 16px; flex-wrap: wrap;
+}
+.footer-brand {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px; letter-spacing: 3px; color: var(--muted);
+}
+.footer-links { display: flex; gap: 20px; align-items: center; }
+.footer-links a {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px; letter-spacing: 1px;
+  color: var(--muted); text-decoration: none; transition: color 0.2s;
+}
+.footer-links a:hover { color: var(--accent); }
+.footer-copy {
+  font-size: 12px; color: var(--muted);
+  font-family: 'Barlow Condensed', sans-serif; letter-spacing: 1px;
+}
+
+/* ─── ANIMATIONS ─── */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 1000px) {
+  .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+  .gallery-item:nth-child(1) { grid-column: span 2; grid-row: span 1; }
+  .gallery-item:nth-child(7) { grid-column: span 1; }
+}
+@media (max-width: 700px) {
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .gallery-item:nth-child(1) { grid-column: span 2; }
+  .gallery-item:nth-child(7) { grid-column: span 2; }
+  .gallery-wrap { padding: 40px 20px; }
+  .page-hero { padding: calc(var(--nav-h) + 40px) 24px 40px; }
+  nav.main-nav { display: none; }
+  .mobile-toggle { display: flex; }
+  .sponsor-nav, .nav-divider { display: none; }
+  header { padding: 0 20px; }
+  .divider-line { margin: 0 20px; }
+  footer { margin: 0 20px; }
+  .photo-count { display: none; }
+  .lb-nav { display: none; }
+}
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KDMVY7QSPF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KDMVY7QSPF');
+</script>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+
+<!-- ─── HEADER ─── -->
+<header>
+  <a class="brand" href="index.html">
+    <img class="brand-logo" src="https://i.ibb.co/Fq0yCBwB/IMG-3678.png" alt="Sahara Gunners">
+    <div class="brand-text">
+      <div class="brand-name">Sahara Gunners</div>
+      <div class="brand-sub">Football Club</div>
+    </div>
+  </a>
+
+  <div style="display:flex;align-items:center;gap:8px;margin-right:auto;margin-left:20px;">
+    <div class="nav-divider"></div>
+    <div class="sponsor-nav" onclick="location.href='sponsors.html'" style="cursor:pointer;">
+      <img src="https://i.ibb.co/3Y0Qff5q/IMG-3717.png" alt="Sponsor">
+    </div>
+  </div>
+
+  <nav class="main-nav">
+    <a href="players.html">Players</a>
+    <a href="announcements.html">Announcements</a>
+    <a href="gallery.html" class="active">Gallery</a>
+    <a href="about.html">About</a>
+    <a href="sponsors.html">Sponsors</a>
+    <a href="ourteam.html">Our Team</a>
+    <button class="nav-live" onclick="location.href='live.html'">
+      <span class="live-dot"></span> Live
+    </button>
+  </nav>
+
+  <button class="mobile-toggle" id="mobileToggle">☰</button>
+</header>
+
+<div class="mobile-panel" id="mobilePanel">
+  <a href="players.html">Players</a>
+  <a href="announcements.html">Announcements</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="about.html">About</a>
+  <a href="sponsors.html">Sponsors</a>
+  <a href="ourteam.html">Our Team</a>
+  <button onclick="location.href='live.html'" style="color:#fff;background:var(--accent2);padding:12px;border-radius:8px;border:none;cursor:pointer;font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;letter-spacing:2px;">⚡ LIVE</button>
+</div>
+
+<!-- ─── PAGE HERO ─── -->
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-inner">
+    <div class="page-hero-left">
+      <div class="page-tag"><span class="tag-dot"></span> Match Moments & Events</div>
+      <h1 class="page-title">
+        PHOTO<br>
+        <span class="accent-word">GALLERY</span>
+      </h1>
+      <p class="page-desc">
+        From pitch battles to team celebrations — relive the moments that define Sahara Gunners FC.
+      </p>
+    </div>
+    <div class="photo-count">13<br>PHOTOS</div>
+  </div>
+</section>
+
+<div class="divider-line"></div>
+
+<!-- ─── GALLERY GRID ─── -->
+<div class="gallery-wrap">
+  <div class="gallery-grid" id="galleryGrid">
+    <div class="gallery-item" data-index="0">
+      <img src="https://i.ibb.co/C3GZ6s6d/13.jpg" alt="Gallery Photo 1">
+      <div class="gallery-item-overlay"><span class="overlay-icon">View</span></div>
+    </div>
+    <div class="gallery-item" data-index="1">
+      <img src="https://i.ibb.co/n8c2gBkv/12.jpg" alt="Gallery Photo 2">
+      <div class="gallery-item-overlay"><span class="overlay-icon">View</span></div>
+    </div>
+    <div class="gallery-item" data-index="2">
+      <img src="https://i.ibb.co/Yqx739t/11.jpg" alt="Gallery Photo 3">
+      <div class="gallery-item-overlay"><span class="overlay-icon">View</span></div>
+    </div>
+    <div class="gallery-item" data-index="3">
+      <img src="https://i.ibb.co/r2c354G9/10.jpg" alt="Gallery Photo 4">
+      <div class="gallery-item-overlay"><span class="overlay-icon">View</span></div>
+    </div>
+    <div class="gallery-item" data-index="4">
+      <img src="https://i.ibb.co/Fby4M7yG/9.jpg" alt="Gallery Photo 5">
+      <div class="gallery-item-overlay"><span class="overlay-icon">View</span></div>
+    </div>
+    <div class="gallery-item" data-index="5">
+      <img src="https://i.ibb.co/JWfKbMdk/8.jpg" alt="Gallery Photo 6">
+      <div class="gallery-item-overlay"><span class="overlay-icon">View</span></div>
+    </div>
+    <div class="gallery-item" data-index="6">
+      <img src="https://i.ibb.co/s90B26zb/7.jpg" alt="Gallery Photo 7">
+      <div class="gallery-item-overlay"><span class="overlay-icon">View</span></div>
+    </div>
+    <div class="gallery-item" data-index="7">
+      <img src="https://i.ibb.co/H0th0dv/6.jpg" alt="Gallery Photo 8">
+      <div class="gallery-item-overlay"><span class="overlay-icon">View</span></div>
+    </div>
+    <div class="gallery-item" data-index="8">
+      <img src="https://i.ibb.co/9HywJ3hY/5.jpg" alt="Gallery Photo 9">
+      <div class="gallery-item-overlay"><span class="overlay-icon">View</span></div>
+    </div>
+    <div class="gallery-item" data-index="9">
+      <img src="https://i.ibb.co/v4nx6Gd1/4.jpg" alt="Gallery Photo 10">
+      <div class="gallery-item-overlay"><span class="overlay-icon">View</span></div>
+    </div>
+    <div class="gallery-item" data-index="10">
+      <img src="https://i.ibb.co/8Lqxd210/3.jpg" alt="Gallery Photo 11">
+      <div class="gallery-item-overlay"><span class="overlay-icon">View</span></div>
+    </div>
+    <div class="gallery-item" data-index="11">
+      <img src="https://i.ibb.co/5gmtKnw7/2.jpg" alt="Gallery Photo 12">
+      <div class="gallery-item-overlay"><span class="overlay-icon">View</span></div>
+    </div>
+    <div class="gallery-item" data-index="12">
+      <img src="https://i.ibb.co/q3JbXMKQ/1.jpg" alt="Gallery Photo 13">
+      <div class="gallery-item-overlay"><span class="overlay-icon">View</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── LIGHTBOX ─── -->
+<div id="lightbox">
+  <button class="lb-close" id="lbClose">✕</button>
+  <button class="lb-nav lb-prev" id="lbPrev">‹</button>
+  <div class="lb-inner">
+    <img src="" alt="Expanded" id="lbImg">
+  </div>
+  <button class="lb-nav lb-next" id="lbNext">›</button>
+  <div class="lb-counter" id="lbCounter"></div>
+</div>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="footer-brand">Sahara Gunners FC</div>
+  <div class="footer-links">
+    <a href="ourteam.html">Editor: M. Bijjo</a>
+    <a href="/cdn-cgi/l/email-protection#5f322a373e32323a3b3d366e6e661f38323e3633713c3032">✉ Email</a>
+    <a href="https://www.instagram.com/m.bijjo" target="_blank"> Instagram</a>
+  </div>
+  <div class="footer-copy">© <span id="year"></span> Sahara Gunners — All rights reserved.</div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Mobile menu
+const toggle = document.getElementById('mobileToggle');
+const panel = document.getElementById('mobilePanel');
+
+
+// Lightbox
+const images = Array.from(document.querySelectorAll('.gallery-item img')).map(i => i.src);
+let current = 0;
+const lightbox = document.getElementById('lightbox');
+const lbImg = document.getElementById('lbImg');
+const lbCounter = document.getElementById('lbCounter');
+
+function openLightbox(index) {
+  current = index;
+  lbImg.src = images[current];
+  lbImg.classList.remove('zoomed');
+  lbCounter.textContent = (current + 1) + ' / ' + images.length;
+  lightbox.classList.add('show');
+}
+
+document.querySelectorAll('.gallery-item').forEach(item => {
+  item.addEventListener('click', () => openLightbox(parseInt(item.dataset.index)));
+});
+
+document.getElementById('lbClose').addEventListener('click', () => lightbox.classList.remove('show'));
+lightbox.addEventListener('click', e => { if (e.target === lightbox) lightbox.classList.remove('show'); });
+
+document.getElementById('lbPrev').addEventListener('click', e => {
+  e.stopPropagation();
+  current = (current - 1 + images.length) % images.length;
+  lbImg.src = images[current];
+  lbImg.classList.remove('zoomed');
+  lbCounter.textContent = (current + 1) + ' / ' + images.length;
+});
+document.getElementById('lbNext').addEventListener('click', e => {
+  e.stopPropagation();
+  current = (current + 1) % images.length;
+  lbImg.src = images[current];
+  lbImg.classList.remove('zoomed');
+  lbCounter.textContent = (current + 1) + ' / ' + images.length;
+});
+
+lbImg.addEventListener('click', e => {
+  e.stopPropagation();
+  lbImg.classList.toggle('zoomed');
+});
+
+// Keyboard nav
+document.addEventListener('keydown', e => {
+  if (e.key === 'ArrowLeft') document.getElementById('lbPrev').click();
+});
+
+var mobileToggle = document.getElementById('mobileToggle');
+var mobilePanel = document.getElementById('mobilePanel');
+mobileToggle.addEventListener('click', function() {
+  mobilePanel.classList.toggle('open');
+  mobileToggle.textContent = mobilePanel.classList.contains('open') ? 'X' : '☰';
+});
+</script>
+</body>
+</html>

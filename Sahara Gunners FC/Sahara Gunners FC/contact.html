@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Contact — Sahara Gunners FC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0a0812;
+  --card: rgba(255,255,255,0.04);
+  --border: rgba(255,255,255,0.08);
+  --accent: #00e5ff;
+  --accent2: #ff6b35;
+  --gold: #f5c842;
+  --text: #f0eefc;
+  --muted: #7b7a96;
+  --nav-h: 72px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--text); font-family: 'Barlow', sans-serif; min-height: 100vh; overflow-x: hidden; }
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  background-size: 200px 200px; pointer-events: none; z-index: 0; opacity: 0.6;
+}
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 2px; }
+
+/* ─── NAV ─── */
+header {
+  position: fixed; top: 0; left: 0; right: 0; height: var(--nav-h); z-index: 100;
+  display: flex; align-items: center; justify-content: space-between; padding: 0 40px;
+  background: rgba(10,8,18,0.7); backdrop-filter: blur(24px); border-bottom: 1px solid var(--border);
+}
+.brand { display: flex; align-items: center; gap: 14px; cursor: pointer; text-decoration: none; }
+.brand-logo { width: 44px; height: 44px; border-radius: 50%; border: 2px solid var(--accent); box-shadow: 0 0 16px rgba(0,229,255,0.3); object-fit: cover; transition: box-shadow 0.3s; }
+.brand:hover .brand-logo { box-shadow: 0 0 28px rgba(0,229,255,0.6); }
+.brand-text { display: flex; flex-direction: column; }
+.brand-name { font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 2px; color: #fff; line-height: 1; }
+.brand-sub { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; letter-spacing: 3px; color: var(--accent); text-transform: uppercase; }
+.nav-divider { width: 1px; height: 32px; background: var(--border); margin: 0 8px; }
+.sponsor-nav img { height: 28px; width: auto; opacity: 0.8; transition: opacity 0.2s; cursor: pointer; }
+.sponsor-nav img:hover { opacity: 1; }
+nav.main-nav { display: flex; align-items: center; gap: 4px; }
+nav.main-nav a {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 600;
+  letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); text-decoration: none;
+  padding: 8px 14px; border-radius: 6px; transition: color 0.2s, background 0.2s;
+}
+nav.main-nav a:hover { color: var(--text); background: var(--card); }
+nav.main-nav a.active { color: var(--accent); background: var(--card); }
+.nav-live {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase;
+  background: linear-gradient(135deg, var(--accent2), #ff9a60);
+  color: #fff; border: none; padding: 8px 18px; border-radius: 6px;
+  cursor: pointer; display: flex; align-items: center; gap: 6px;
+  transition: transform 0.15s, box-shadow 0.2s; box-shadow: 0 0 20px rgba(255,107,53,0.35);
+}
+.nav-live:hover { transform: scale(1.04); box-shadow: 0 0 30px rgba(255,107,53,0.5); }
+.live-dot { width: 7px; height: 7px; background: #fff; border-radius: 50%; animation: pulse-dot 1.4s ease-in-out infinite; }
+@keyframes pulse-dot { 0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.4;transform:scale(0.7);} }
+.mobile-toggle { display: none; background: none; border: 1px solid var(--border); color: var(--text); font-size: 20px; padding: 6px 12px; border-radius: 6px; cursor: pointer; }
+.mobile-panel {
+  display: none; position: fixed; top: var(--nav-h); right: 0; left: 0;
+  background: rgba(10,8,18,0.97); backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border); padding: 20px; flex-direction: column; gap: 4px; z-index: 99;
+}
+.mobile-panel.open { display: flex; }
+.mobile-panel a, .mobile-panel button {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 600;
+  letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted);
+  text-decoration: none; background: none; border: none;
+  padding: 12px 16px; border-radius: 8px; text-align: left; cursor: pointer;
+  transition: color 0.2s, background 0.2s;
+}
+.mobile-panel a:hover, .mobile-panel button:hover { color: var(--accent); background: var(--card); }
+
+/* ─── PAGE HERO ─── */
+.page-hero { position: relative; padding: calc(var(--nav-h) + 80px) 60px 70px; overflow: hidden; }
+.page-hero-bg {
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 70% 10%, rgba(0,229,255,0.07) 0%, transparent 55%),
+              radial-gradient(ellipse at 15% 90%, rgba(255,107,53,0.04) 0%, transparent 50%);
+  pointer-events: none;
+}
+.page-hero-inner { position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; }
+.page-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(0,229,255,0.1); border: 1px solid rgba(0,229,255,0.25);
+  color: var(--accent); font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase;
+  padding: 6px 14px; border-radius: 4px; margin-bottom: 20px; animation: fade-up 0.7s ease both;
+}
+.tag-dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; }
+.page-title {
+  font-family: 'Bebas Neue', sans-serif; font-size: clamp(56px, 7vw, 96px);
+  line-height: 0.92; letter-spacing: 2px; color: #fff;
+  animation: fade-up 0.7s 0.08s ease both; margin-bottom: 20px;
+}
+.page-title .accent-word { color: var(--accent); }
+.page-desc { font-size: 16px; font-weight: 300; line-height: 1.7; color: var(--muted); max-width: 480px; animation: fade-up 0.7s 0.16s ease both; }
+
+.divider-line { position: relative; z-index: 2; height: 1px; background: var(--border); margin: 0 40px; }
+
+/* ─── CONTACT WRAP ─── */
+.contact-wrap {
+  position: relative; z-index: 2;
+  max-width: 1100px; margin: 0 auto;
+  padding: 60px 40px 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+/* ─── CONTACT CARDS ─── */
+.contact-section-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 20px;
+  display: flex; align-items: center; gap: 10px;
+}
+.contact-section-label::after { content: ''; flex: 1; max-width: 40px; height: 1px; background: var(--accent); opacity: 0.4; }
+
+.contact-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 18px; overflow: hidden;
+  transition: border-color 0.25s, transform 0.2s;
+  animation: fade-up 0.6s ease both;
+  margin-bottom: 16px;
+}
+.contact-card:hover { border-color: rgba(0,229,255,0.25); transform: translateY(-3px); }
+.contact-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, var(--accent), transparent); opacity: 0; transition: opacity 0.3s;
+}
+.contact-card { position: relative; }
+.contact-card:hover::before { opacity: 1; }
+
+.contact-card-header {
+  padding: 16px 22px; border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; gap: 12px;
+}
+.contact-card-icon {
+  width: 38px; height: 38px; border-radius: 10px;
+  background: rgba(0,229,255,0.1); border: 1px solid rgba(0,229,255,0.2);
+  display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0;
+}
+.contact-card-icon.orange { background: rgba(255,107,53,0.1); border-color: rgba(255,107,53,0.2); }
+.contact-card-icon.gold { background: rgba(245,200,66,0.1); border-color: rgba(245,200,66,0.2); }
+.contact-card-icon.pink { background: rgba(225,48,108,0.1); border-color: rgba(225,48,108,0.2); }
+.contact-card-icon.blue { background: rgba(24,119,242,0.1); border-color: rgba(24,119,242,0.2); }
+.contact-card-title { font-family: 'Barlow Condensed', sans-serif; font-size: 15px; font-weight: 700; letter-spacing: 1px; color: var(--text); }
+.contact-card-subtitle { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; letter-spacing: 1px; color: var(--muted); text-transform: uppercase; }
+
+.contact-card-body { padding: 20px 22px; }
+.contact-row {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 0; border-bottom: 1px solid var(--border);
+  text-decoration: none;
+}
+.contact-row:last-child { border-bottom: none; padding-bottom: 0; }
+.contact-row-label { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); width: 70px; flex-shrink: 0; }
+.contact-row-value { font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 600; color: var(--text); flex: 1; }
+.contact-row-arrow { font-size: 14px; color: var(--muted); transition: color 0.2s, transform 0.2s; }
+a.contact-row:hover .contact-row-value { color: var(--accent); }
+a.contact-row:hover .contact-row-arrow { color: var(--accent); transform: translateX(3px); }
+
+/* ─── SOCIAL BIG BUTTONS ─── */
+.social-grid { display: flex; flex-direction: column; gap: 14px; }
+.social-btn {
+  display: flex; align-items: center; gap: 16px;
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 14px; padding: 18px 20px;
+  text-decoration: none; color: var(--text);
+  transition: border-color 0.2s, transform 0.15s, background 0.2s;
+  position: relative; overflow: hidden;
+}
+.social-btn:hover { transform: translateX(4px); background: rgba(255,255,255,0.06); }
+.social-btn.email:hover { border-color: rgba(0,229,255,0.4); }
+.social-btn.instagram:hover { border-color: rgba(225,48,108,0.4); }
+.social-btn.facebook:hover { border-color: rgba(24,119,242,0.4); }
+.social-btn::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0,229,255,0.3), transparent);
+  opacity: 0; transition: opacity 0.3s;
+}
+.social-btn:hover::before { opacity: 1; }
+.social-btn-icon {
+  width: 48px; height: 48px; border-radius: 12px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center; font-size: 24px;
+}
+.social-btn.email .social-btn-icon { background: rgba(0,229,255,0.1); border: 1px solid rgba(0,229,255,0.2); }
+.social-btn.instagram .social-btn-icon { background: rgba(225,48,108,0.1); border: 1px solid rgba(225,48,108,0.2); }
+.social-btn.facebook .social-btn-icon { background: rgba(24,119,242,0.1); border: 1px solid rgba(24,119,242,0.2); }
+.social-btn-info { flex: 1; }
+.social-btn-label { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 3px; }
+.social-btn-value { font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 700; color: var(--text); }
+.social-btn-arrow { font-size: 18px; color: var(--muted); transition: color 0.2s, transform 0.2s; }
+.social-btn:hover .social-btn-arrow { color: var(--accent); transform: translateX(3px); }
+
+/* ─── FOOTER ─── */
+footer {
+  position: relative; z-index: 2; margin: 0 40px; padding: 28px 0;
+  border-top: 1px solid var(--border);
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+}
+.footer-brand { font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: 3px; color: var(--muted); }
+.footer-links { display: flex; gap: 20px; align-items: center; }
+.footer-links a { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; letter-spacing: 1px; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: var(--accent); }
+.footer-copy { font-size: 12px; color: var(--muted); font-family: 'Barlow Condensed', sans-serif; letter-spacing: 1px; }
+
+@keyframes fade-up { from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);} }
+
+@media (max-width: 900px) {
+  .contact-wrap { grid-template-columns: 1fr; padding: 40px 24px 60px; }
+  .page-hero { padding: calc(var(--nav-h) + 40px) 24px 40px; }
+  nav.main-nav { display: none; }
+  .mobile-toggle { display: flex; }
+  .sponsor-nav, .nav-divider { display: none; }
+  header { padding: 0 20px; }
+  .divider-line { margin: 0 20px; }
+  footer { margin: 0 20px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a class="brand" href="index.html">
+    <img class="brand-logo" src="https://i.ibb.co/Fq0yCBwB/IMG-3678.png" alt="Sahara Gunners">
+    <div class="brand-text">
+      <div class="brand-name">Sahara Gunners</div>
+      <div class="brand-sub">Football Club</div>
+    </div>
+  </a>
+  <div style="display:flex;align-items:center;gap:8px;margin-right:auto;margin-left:20px;">
+    <div class="nav-divider"></div>
+    <div class="sponsor-nav" onclick="location.href='sponsors.html'" style="cursor:pointer;">
+      <img src="https://i.ibb.co/3Y0Qff5q/IMG-3717.png" alt="Sponsor">
+    </div>
+  </div>
+  <nav class="main-nav">
+    <a href="players.html">Players</a>
+    <a href="announcements.html">Announcements</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About</a>
+    <a href="sponsors.html">Sponsors</a>
+    <a href="ourteam.html">Our Team</a>
+    <button class="nav-live" onclick="location.href='live.html'">
+      <span class="live-dot"></span> Live
+    </button>
+  </nav>
+  <button class="mobile-toggle" id="mobileToggle">☰</button>
+</header>
+
+<div class="mobile-panel" id="mobilePanel">
+  <a href="players.html">Players</a>
+  <a href="announcements.html">Announcements</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="about.html">About</a>
+  <a href="sponsors.html">Sponsors</a>
+  <a href="ourteam.html">Our Team</a>
+  <button onclick="location.href='live.html'" style="color:#fff;background:var(--accent2);padding:12px;border-radius:8px;border:none;cursor:pointer;font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;letter-spacing:2px;">⚡ LIVE</button>
+</div>
+
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-inner">
+    <div class="page-tag"><span class="tag-dot"></span> Reach Out</div>
+    <h1 class="page-title">CONTACT<br><span class="accent-word">US</span></h1>
+    <p class="page-desc">Get in touch with Sahara Gunners FC — whether it's about sponsorships, partnerships, or just to connect.</p>
+  </div>
+</section>
+
+<div class="divider-line"></div>
+
+<div class="contact-wrap">
+
+  <!-- LEFT COLUMN -->
+  <div>
+    <div class="contact-section-label">Direct Contact</div>
+
+    <!-- Email -->
+    <div class="contact-card" style="animation-delay:0.05s;">
+      <div class="contact-card-header">
+        <div class="contact-card-icon">✉</div>
+        <div>
+          <div class="contact-card-title">Email</div>
+          <div class="contact-card-subtitle">Send us a message</div>
+        </div>
+      </div>
+      <div class="contact-card-body">
+        <a class="contact-row" href="mailto:k.menr19@yahoo.com">
+          <div class="contact-row-label">Sponsorship</div>
+          <div class="contact-row-value">k.menr19@yahoo.com</div>
+          <div class="contact-row-arrow">→</div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Club Info -->
+    <div class="contact-card" style="animation-delay:0.1s;">
+      <div class="contact-card-header">
+        <div class="contact-card-icon orange"><img src="favicon.png" alt="Sahara Gunners" style="width:24px;height:24px;object-fit:contain;border-radius:50%;"></div>
+        <div>
+          <div class="contact-card-title">Sahara Gunners FC</div>
+          <div class="contact-card-subtitle">Buffalo, New York</div>
+        </div>
+      </div>
+      <div class="contact-card-body">
+        <div class="contact-row">
+          <div class="contact-row-label">City</div>
+          <div class="contact-row-value">Buffalo, New York</div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-row-label">League</div>
+          <div class="contact-row-value">Amateur Football</div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-row-label">Founded</div>
+          <div class="contact-row-value">Sahara Gunners FC</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- RIGHT COLUMN -->
+  <div>
+    <div class="contact-section-label">Follow Us</div>
+
+    <div class="social-grid">
+
+      <!-- Email -->
+      <a class="social-btn email" href="mailto:k.menr19@yahoo.com">
+        <div class="social-btn-icon">✉</div>
+        <div class="social-btn-info">
+          <div class="social-btn-label">Email Us</div>
+          <div class="social-btn-value">k.menr19@yahoo.com</div>
+        </div>
+        <div class="social-btn-arrow">→</div>
+      </a>
+
+      <!-- Instagram -->
+      <a class="social-btn instagram" href="https://www.instagram.com/sahara_gunners_fc?igsh=bWRnNW11NW5xanRo" target="_blank">
+        <div class="social-btn-icon">
+          <img src="instaicon.svg" alt="Instagram" style="width:28px;height:28px;object-fit:contain;border-radius:6px;">
+        </div>
+        <div class="social-btn-info">
+          <div class="social-btn-label">Instagram</div>
+          <div class="social-btn-value">@sahara_gunners_fc</div>
+        </div>
+        <div class="social-btn-arrow">→</div>
+      </a>
+
+      <!-- Facebook -->
+      <a class="social-btn facebook" href="https://www.facebook.com/share/1BgADUo9LS/?mibextid=wwXIfr" target="_blank">
+        <div class="social-btn-icon">
+          <img src="faceicon.png" alt="Facebook" style="width:28px;height:28px;object-fit:contain;border-radius:6px;">
+        </div>
+        <div class="social-btn-info">
+          <div class="social-btn-label">Facebook</div>
+          <div class="social-btn-value">Sahara Gunners FC</div>
+        </div>
+        <div class="social-btn-arrow">→</div>
+      </a>
+
+    </div>
+
+    <!-- Editor note -->
+    <div style="margin-top:24px;background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;">
+      <div style="font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:10px;">Website</div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <div style="width:38px;height:38px;border-radius:10px;background:rgba(0,229,255,0.08);border:1px solid rgba(0,229,255,0.15);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;">💻</div>
+        <div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;color:var(--text);">Editor: M. Bijjo</div>
+          <a href="mailto:muhammedbi119@gmail.com" style="font-family:'Barlow Condensed',sans-serif;font-size:12px;color:var(--muted);text-decoration:none;letter-spacing:0.5px;transition:color 0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--muted)'">muhammedbi119@gmail.com</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-brand">Sahara Gunners FC</div>
+  <div class="footer-links">
+    <a href="ourteam.html">Editor: M. Bijjo</a>
+    <a href="mailto:muhammedbi119@gmail.com">✉ Email</a>
+    <a href="https://www.instagram.com/m.bijjo" target="_blank"> Instagram</a>
+  </div>
+  <div class="footer-copy">© <span id="year"></span> Sahara Gunners — All rights reserved.</div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+var toggle = document.getElementById('mobileToggle');
+var panel = document.getElementById('mobilePanel');
+toggle.addEventListener('click', function() {
+  panel.classList.toggle('open');
+  toggle.textContent = panel.classList.contains('open') ? 'X' : '☰';
+});
+</script>
+</body>
+</html>

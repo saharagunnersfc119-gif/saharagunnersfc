@@ -1,0 +1,819 @@
+<!doctype html>
+<html lang="en" translate="no">
+<head>
+<meta charset="utf-8"/>
+<meta name="google" content="notranslate">
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+<meta name="description" content="Sahara Gunners FC sponsors and partners — businesses supporting Buffalo amateur football.">
+<meta name="keywords" content="Sahara Gunners, Sahara Gunners FC, Buffalo soccer, Buffalo football, amateur soccer Buffalo NY">
+<meta name="robots" content="index, follow">
+<title>Sponsors — Sahara Gunners FC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0a0812;
+  --card: rgba(255,255,255,0.04);
+  --border: rgba(255,255,255,0.08);
+  --accent: #00e5ff;
+  --accent2: #ff6b35;
+  --gold: #f5c842;
+  --text: #f0eefc;
+  --muted: #7b7a96;
+  --nav-h: 72px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--text); font-family: 'Barlow', sans-serif; min-height: 100vh; overflow-x: hidden; }
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  background-size: 200px 200px; pointer-events: none; z-index: 0; opacity: 0.6;
+}
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 2px; }
+
+/* ─── NAV ─── */
+header {
+  position: fixed; top: 0; left: 0; right: 0; height: var(--nav-h); z-index: 100;
+  display: flex; align-items: center; justify-content: space-between; padding: 0 40px;
+  background: rgba(10,8,18,0.7); backdrop-filter: blur(24px); border-bottom: 1px solid var(--border);
+}
+.brand { display: flex; align-items: center; gap: 14px; cursor: pointer; text-decoration: none; }
+.brand-logo { width: 44px; height: 44px; border-radius: 50%; border: 2px solid var(--accent); box-shadow: 0 0 16px rgba(0,229,255,0.3); object-fit: cover; transition: box-shadow 0.3s; }
+.brand:hover .brand-logo { box-shadow: 0 0 28px rgba(0,229,255,0.6); }
+.brand-text { display: flex; flex-direction: column; }
+.brand-name { font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 2px; color: #fff; line-height: 1; }
+.brand-sub { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; letter-spacing: 3px; color: var(--accent); text-transform: uppercase; }
+.nav-divider { width: 1px; height: 32px; background: var(--border); margin: 0 8px; }
+.sponsor-nav img { height: 28px; width: auto; opacity: 0.8; transition: opacity 0.2s; cursor: pointer; }
+.sponsor-nav img:hover { opacity: 1; }
+nav.main-nav { display: flex; align-items: center; gap: 4px; }
+nav.main-nav a {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 600;
+  letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); text-decoration: none;
+  padding: 8px 14px; border-radius: 6px; transition: color 0.2s, background 0.2s;
+}
+nav.main-nav a:hover { color: var(--text); background: var(--card); }
+nav.main-nav a.active { color: var(--accent); background: var(--card); }
+.nav-live {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase;
+  background: linear-gradient(135deg, var(--accent2), #ff9a60);
+  color: #fff; border: none; padding: 8px 18px; border-radius: 6px;
+  cursor: pointer; display: flex; align-items: center; gap: 6px;
+  transition: transform 0.15s, box-shadow 0.2s; box-shadow: 0 0 20px rgba(255,107,53,0.35);
+}
+.nav-live:hover { transform: scale(1.04); box-shadow: 0 0 30px rgba(255,107,53,0.5); }
+.live-dot { width: 7px; height: 7px; background: #fff; border-radius: 50%; animation: pulse-dot 1.4s ease-in-out infinite; }
+@keyframes pulse-dot { 0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.4;transform:scale(0.7);} }
+.mobile-toggle { display: none; background: none; border: 1px solid var(--border); color: var(--text); font-size: 20px; padding: 6px 12px; border-radius: 6px; cursor: pointer; }
+.mobile-panel {
+  display: none; position: fixed; top: var(--nav-h); right: 0; left: 0;
+  background: rgba(10,8,18,0.97); backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border); padding: 20px; flex-direction: column; gap: 4px; z-index: 99;
+}
+.mobile-panel.open { display: flex; }
+.mobile-panel a, .mobile-panel button {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 600;
+  letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted);
+  text-decoration: none; background: none; border: none;
+  padding: 12px 16px; border-radius: 8px; text-align: left; cursor: pointer;
+  transition: color 0.2s, background 0.2s;
+}
+.mobile-panel a:hover, .mobile-panel button:hover { color: var(--accent); background: var(--card); }
+
+/* ─── PAGE HERO ─── */
+.page-hero { position: relative; padding: calc(var(--nav-h) + 80px) 60px 70px; overflow: hidden; }
+.page-hero-bg {
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 75% 10%, rgba(245,200,66,0.07) 0%, transparent 55%),
+              radial-gradient(ellipse at 15% 90%, rgba(0,229,255,0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+.page-hero-inner { position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; }
+.page-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(245,200,66,0.1); border: 1px solid rgba(245,200,66,0.25);
+  color: var(--gold); font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase;
+  padding: 6px 14px; border-radius: 4px; margin-bottom: 20px; animation: fade-up 0.7s ease both;
+}
+.tag-dot { width: 6px; height: 6px; background: var(--gold); border-radius: 50%; }
+.page-title {
+  font-family: 'Bebas Neue', sans-serif; font-size: clamp(56px, 7vw, 96px);
+  line-height: 0.92; letter-spacing: 2px; color: #fff;
+  animation: fade-up 0.7s 0.08s ease both; margin-bottom: 20px;
+}
+.page-title .accent-word { color: var(--gold); }
+.page-desc { font-size: 16px; font-weight: 300; line-height: 1.7; color: var(--muted); max-width: 460px; animation: fade-up 0.7s 0.16s ease both; }
+
+.divider-line { position: relative; z-index: 2; height: 1px; background: var(--border); margin: 0 40px; }
+
+/* ─── SPONSORS WRAP ─── */
+.sponsors-wrap { position: relative; z-index: 2; max-width: 1100px; margin: 0 auto; padding: 70px 40px; }
+
+.section-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 32px;
+  display: flex; align-items: center; gap: 10px;
+}
+.section-label::after { content: ''; flex: 1; max-width: 40px; height: 1px; background: var(--gold); opacity: 0.4; }
+
+/* ─── FEATURED SPONSOR ─── */
+.featured-sponsor {
+  background: var(--card); border: 1px solid rgba(245,200,66,0.2);
+  border-radius: 20px; padding: 50px 40px;
+  display: flex; align-items: center; justify-content: space-between; gap: 40px;
+  margin-bottom: 20px; position: relative; overflow: hidden;
+  transition: border-color 0.3s, transform 0.2s;
+  animation: fade-up 0.7s 0.1s ease both;
+  cursor: pointer;
+}
+.featured-sponsor::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+}
+.featured-sponsor::after {
+  content: ''; position: absolute; right: -60px; top: 50%; transform: translateY(-50%);
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(245,200,66,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+.featured-sponsor:hover { border-color: rgba(245,200,66,0.4); transform: translateY(-3px); }
+.featured-badge {
+  position: absolute; top: 20px; left: 24px;
+  font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 700;
+  letter-spacing: 3px; text-transform: uppercase;
+  color: var(--gold); background: rgba(245,200,66,0.12);
+  border: 1px solid rgba(245,200,66,0.25); padding: 4px 10px; border-radius: 4px;
+}
+.featured-logo {
+  flex-shrink: 0; width: 200px; height: 110px;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(255,255,255,0.05); border-radius: 12px; padding: 16px;
+}
+.featured-logo img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.featured-info { flex: 1; }
+.featured-name { font-family: 'Bebas Neue', sans-serif; font-size: 36px; letter-spacing: 2px; color: #fff; margin-bottom: 8px; }
+.featured-desc { font-size: 15px; font-weight: 300; line-height: 1.7; color: var(--muted); max-width: 420px; }
+.featured-click-hint {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 11px; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--gold); margin-top: 14px;
+  display: flex; align-items: center; gap: 6px; opacity: 0.7;
+}
+
+/* ─── PARTNER GRID ─── */
+.partner-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 20px;
+}
+.partner-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 16px; padding: 32px 24px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 14px; transition: border-color 0.25s, transform 0.2s;
+  animation: fade-up 0.6s ease both; cursor: pointer;
+  position: relative; overflow: hidden;
+}
+.partner-card:hover { border-color: rgba(0,229,255,0.3); transform: translateY(-4px); }
+.partner-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  opacity: 0; transition: opacity 0.3s;
+}
+.partner-card:hover::before { opacity: 1; }
+.partner-logo { width: 100%; height: 70px; display: flex; align-items: center; justify-content: center; }
+.partner-logo img { max-width: 150px; max-height: 70px; object-fit: contain; filter: brightness(0.85); transition: filter 0.2s; }
+.partner-card:hover .partner-logo img { filter: brightness(1.1); }
+.partner-name {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700;
+  letter-spacing: 1px; text-align: center; color: var(--text);
+}
+.partner-label {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 10px; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--muted);
+}
+.partner-click-hint {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 10px; letter-spacing: 1.5px;
+  text-transform: uppercase; color: var(--accent); opacity: 0;
+  transition: opacity 0.2s; margin-top: 2px;
+}
+.partner-card:hover .partner-click-hint { opacity: 0.7; }
+
+/* ─── BECOME SPONSOR CTA ─── */
+.become-sponsor {
+  position: relative; z-index: 2; margin: 0 40px 60px;
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 20px; padding: 60px 40px; text-align: center; overflow: hidden;
+}
+.become-sponsor::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(0,229,255,0.06) 0%, transparent 60%);
+  pointer-events: none;
+}
+.become-sponsor-title { font-family: 'Bebas Neue', sans-serif; font-size: 48px; letter-spacing: 3px; color: #fff; margin-bottom: 12px; position: relative; }
+.become-sponsor-title span { color: var(--accent); }
+.become-sponsor-desc { font-size: 15px; font-weight: 300; line-height: 1.7; color: var(--muted); max-width: 500px; margin: 0 auto 28px; position: relative; }
+.become-sponsor-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--bg); background: var(--accent); border: none; padding: 14px 32px;
+  border-radius: 6px; cursor: pointer; text-decoration: none;
+  transition: box-shadow 0.2s, transform 0.15s; box-shadow: 0 0 24px rgba(0,229,255,0.3); position: relative;
+}
+.become-sponsor-btn:hover { transform: translateY(-2px); box-shadow: 0 0 40px rgba(0,229,255,0.5); }
+
+/* ─── CONTACT MODAL ─── */
+.contact-modal-overlay {
+  position: fixed; inset: 0; z-index: 300;
+  background: rgba(0,0,0,0.88); backdrop-filter: blur(18px);
+  display: none; align-items: center; justify-content: center; padding: 24px;
+  opacity: 0; transition: opacity 0.3s;
+}
+.contact-modal-overlay.open { display: flex; }
+.contact-modal-overlay.visible { opacity: 1; }
+.contact-modal {
+  position: relative; background: #0f0d1c; border: 1px solid rgba(0,229,255,0.15);
+  border-radius: 24px; width: 100%; max-width: 480px; overflow: hidden;
+  transform: translateY(24px) scale(0.97); transition: transform 0.3s;
+}
+.contact-modal-overlay.visible .contact-modal { transform: translateY(0) scale(1); }
+.contact-modal-close {
+  position: absolute; top: 18px; right: 18px; font-size: 16px; color: var(--muted);
+  background: rgba(255,255,255,0.06); border: 1px solid var(--border);
+  width: 34px; height: 34px; border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; transition: color 0.2s, border-color 0.2s; z-index: 10;
+}
+.contact-modal-close:hover { color: var(--text); border-color: var(--accent); }
+.contact-modal-header {
+  padding: 36px 32px 24px;
+  border-bottom: 1px solid var(--border);
+  background: radial-gradient(ellipse at 50% 0%, rgba(0,229,255,0.06) 0%, transparent 70%);
+}
+.contact-modal-tag {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 700;
+  letter-spacing: 3px; text-transform: uppercase;
+  color: var(--accent); background: rgba(0,229,255,0.08);
+  border: 1px solid rgba(0,229,255,0.2); padding: 4px 10px; border-radius: 4px; margin-bottom: 14px;
+}
+.contact-modal-title { font-family: 'Bebas Neue', sans-serif; font-size: 36px; letter-spacing: 2px; color: #fff; line-height: 1; margin-bottom: 6px; }
+.contact-modal-title span { color: var(--accent); }
+.contact-modal-sub { font-size: 13px; font-weight: 300; color: var(--muted); line-height: 1.6; }
+.contact-links { padding: 24px 32px 32px; display: flex; flex-direction: column; gap: 14px; }
+.contact-link {
+  display: flex; align-items: center; gap: 16px;
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 14px; padding: 18px 20px;
+  text-decoration: none; color: var(--text);
+  transition: border-color 0.2s, transform 0.15s, background 0.2s; cursor: pointer;
+}
+.contact-link:hover { transform: translateX(4px); background: rgba(255,255,255,0.06); }
+.contact-link.email:hover { border-color: rgba(0,229,255,0.4); }
+.contact-link.instagram:hover { border-color: rgba(225,48,108,0.5); }
+.contact-link.facebook:hover { border-color: rgba(24,119,242,0.5); }
+.contact-link-icon { width: 46px; height: 46px; border-radius: 12px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 22px; }
+.contact-link.email .contact-link-icon { background: rgba(0,229,255,0.1); border: 1px solid rgba(0,229,255,0.2); }
+.contact-link.instagram .contact-link-icon { background: rgba(225,48,108,0.1); border: 1px solid rgba(225,48,108,0.2); }
+.contact-link.facebook .contact-link-icon { background: rgba(24,119,242,0.1); border: 1px solid rgba(24,119,242,0.2); }
+.contact-link-info { flex: 1; }
+.contact-link-label { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 3px; }
+.contact-link-value { font-family: 'Barlow Condensed', sans-serif; font-size: 15px; font-weight: 600; color: var(--text); }
+.contact-link-arrow { font-size: 16px; color: var(--muted); transition: color 0.2s, transform 0.2s; }
+.contact-link:hover .contact-link-arrow { color: var(--accent); transform: translateX(3px); }
+
+/* ─── MODAL ─── */
+.modal-overlay {
+  position: fixed; inset: 0; z-index: 200;
+  background: rgba(0,0,0,0.85); backdrop-filter: blur(16px);
+  display: none; align-items: center; justify-content: center; padding: 24px;
+  opacity: 0; transition: opacity 0.3s;
+}
+.modal-overlay.open { display: flex; }
+.modal-overlay.visible { opacity: 1; }
+.modal {
+  position: relative; background: #0f0d1c; border: 1px solid var(--border);
+  border-radius: 24px; width: 100%; max-width: 600px;
+  transform: translateY(20px) scale(0.97); transition: transform 0.3s;
+  max-height: 90vh; overflow-y: auto;
+}
+.modal-overlay.visible .modal { transform: translateY(0) scale(1); }
+.modal-close {
+  position: absolute; top: 20px; right: 20px; font-size: 18px; color: var(--muted);
+  background: rgba(255,255,255,0.06); border: 1px solid var(--border);
+  width: 36px; height: 36px; border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; transition: color 0.2s, border-color 0.2s; z-index: 10;
+}
+.modal-close:hover { color: var(--text); border-color: var(--accent); }
+
+/* Title sponsor modal banner */
+.modal-banner-gold {
+  width: 100%; height: 180px; position: relative; overflow: hidden;
+  background: linear-gradient(135deg, rgba(245,200,66,0.08), rgba(10,8,18,0.9));
+  display: flex; align-items: center; justify-content: center;
+  border-bottom: 1px solid rgba(245,200,66,0.15);
+}
+.modal-banner-gold img { max-height: 110px; max-width: 260px; object-fit: contain; }
+.modal-banner-gold::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+}
+
+/* Partner modal banner */
+.modal-banner-partner {
+  width: 100%; height: 160px; position: relative; overflow: hidden;
+  background: linear-gradient(135deg, rgba(0,229,255,0.06), rgba(10,8,18,0.9));
+  display: flex; align-items: center; justify-content: center;
+  border-bottom: 1px solid rgba(0,229,255,0.12);
+}
+.modal-banner-partner img { max-height: 100px; max-width: 240px; object-fit: contain; }
+.modal-banner-partner::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+}
+
+.modal-body { padding: 28px 32px 36px; }
+.modal-tier {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 700;
+  letter-spacing: 3px; text-transform: uppercase;
+  padding: 4px 12px; border-radius: 4px; margin-bottom: 12px;
+}
+.modal-tier.gold { color: var(--gold); background: rgba(245,200,66,0.1); border: 1px solid rgba(245,200,66,0.25); }
+.modal-tier.partner { color: var(--accent); background: rgba(0,229,255,0.08); border: 1px solid rgba(0,229,255,0.2); }
+.modal-sponsor-name { font-family: 'Bebas Neue', sans-serif; font-size: 36px; letter-spacing: 2px; color: #fff; margin-bottom: 6px; line-height: 1; }
+.modal-sponsor-tagline { font-size: 13px; font-weight: 300; color: var(--muted); margin-bottom: 20px; line-height: 1.6; }
+.modal-divider { height: 1px; background: var(--border); margin: 20px 0; }
+.modal-info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 20px; }
+.modal-info-item { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; }
+.modal-info-label { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+.modal-info-value { font-family: 'Barlow Condensed', sans-serif; font-size: 15px; font-weight: 600; color: var(--text); }
+.modal-about-label {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700;
+  letter-spacing: 3px; text-transform: uppercase; color: var(--muted);
+  margin-bottom: 10px; display: flex; align-items: center; gap: 8px;
+}
+.modal-about-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+.modal-about-text { font-size: 14px; font-weight: 300; line-height: 1.8; color: var(--muted); margin-bottom: 22px; }
+.modal-website-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--bg); background: var(--accent); border: none;
+  padding: 12px 26px; border-radius: 6px; cursor: pointer; text-decoration: none;
+  transition: box-shadow 0.2s, transform 0.15s; box-shadow: 0 0 20px rgba(0,229,255,0.25);
+}
+.modal-website-btn:hover { transform: translateY(-2px); box-shadow: 0 0 32px rgba(0,229,255,0.45); }
+.modal-coming-soon {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 13px; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--muted);
+  background: var(--card); border: 1px solid var(--border);
+  padding: 12px 20px; border-radius: 8px; display: inline-block;
+}
+
+/* ─── FOOTER ─── */
+footer {
+  position: relative; z-index: 2; margin: 0 40px; padding: 28px 0;
+  border-top: 1px solid var(--border);
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+}
+.footer-brand { font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: 3px; color: var(--muted); }
+.footer-links { display: flex; gap: 20px; align-items: center; }
+.footer-links a { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; letter-spacing: 1px; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: var(--accent); }
+.footer-copy { font-size: 12px; color: var(--muted); font-family: 'Barlow Condensed', sans-serif; letter-spacing: 1px; }
+
+@keyframes fade-up { from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);} }
+
+@media (max-width: 900px) {
+  .page-hero { padding: calc(var(--nav-h) + 40px) 24px 40px; }
+  .sponsors-wrap { padding: 40px 24px; }
+  .featured-sponsor { flex-direction: column; align-items: flex-start; padding: 40px 24px; }
+  .partner-grid { grid-template-columns: repeat(2, 1fr); }
+  nav.main-nav { display: none; }
+  .mobile-toggle { display: flex; }
+  .sponsor-nav, .nav-divider { display: none; }
+  header { padding: 0 20px; }
+  .divider-line { margin: 0 20px; }
+  footer { margin: 0 20px; }
+  .become-sponsor { margin: 0 20px 40px; padding: 40px 24px; }
+  .modal-body { padding: 20px 20px 28px; }
+  .modal-info-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 500px) {
+  .partner-grid { grid-template-columns: 1fr; }
+}
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KDMVY7QSPF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KDMVY7QSPF');
+</script>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+
+<header>
+  <a class="brand" href="index.html">
+    <img class="brand-logo" src="https://i.ibb.co/Fq0yCBwB/IMG-3678.png" alt="Sahara Gunners">
+    <div class="brand-text">
+      <div class="brand-name">Sahara Gunners</div>
+      <div class="brand-sub">Football Club</div>
+    </div>
+  </a>
+  <div style="display:flex;align-items:center;gap:8px;margin-right:auto;margin-left:20px;">
+    <div class="nav-divider"></div>
+    <div class="sponsor-nav" onclick="location.href='sponsors.html'" style="cursor:pointer;">
+      <img src="https://i.ibb.co/3Y0Qff5q/IMG-3717.png" alt="Sponsor">
+    </div>
+  </div>
+  <nav class="main-nav">
+    <a href="players.html">Players</a>
+    <a href="announcements.html">Announcements</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About</a>
+    <a href="sponsors.html" class="active">Sponsors</a>
+    <a href="ourteam.html">Our Team</a>
+    <button class="nav-live" onclick="location.href='live.html'">
+      <span class="live-dot"></span> Live
+    </button>
+  </nav>
+  <button class="mobile-toggle" id="mobileToggle">☰</button>
+</header>
+
+<div class="mobile-panel" id="mobilePanel">
+  <a href="players.html">Players</a>
+  <a href="announcements.html">Announcements</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="about.html">About</a>
+  <a href="sponsors.html">Sponsors</a>
+  <a href="ourteam.html">Our Team</a>
+  <button onclick="location.href='live.html'" style="color:#fff;background:var(--accent2);padding:12px;border-radius:8px;border:none;cursor:pointer;font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;letter-spacing:2px;">⚡ LIVE</button>
+</div>
+
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-inner">
+    <div>
+      <div class="page-tag"><span class="tag-dot"></span> Our Partners</div>
+      <h1 class="page-title">OUR<br><span class="accent-word">SPONSORS</span></h1>
+      <p class="page-desc">Proud to be backed by the businesses and individuals who believe in Buffalo football and share our vision.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider-line"></div>
+
+<div class="sponsors-wrap">
+
+  <div class="section-label">Title Sponsor</div>
+
+  <!-- FEATURED: Molina Healthcare -->
+  <div class="featured-sponsor" onclick="openModal('molina')">
+    <div class="featured-badge">⭐ Title Sponsor</div>
+    <div class="featured-logo">
+      <img src="Sponsors/Molina-Healthcare.png" alt="Molina Healthcare">
+    </div>
+    <div class="featured-info">
+      <div class="featured-name">Molina Healthcare</div>
+      <p class="featured-desc">Our title sponsor — a proud supporter of Sahara Gunners FC and the growth of amateur football in Buffalo, New York.</p>
+      <div class="featured-click-hint">▶ Click to learn more</div>
+    </div>
+  </div>
+
+  <div class="section-label" style="margin-top:60px;">Partner Brands</div>
+
+  <div class="partner-grid" id="partnerGrid"></div>
+
+</div>
+
+<!-- BECOME A SPONSOR -->
+<div class="become-sponsor">
+  <div class="become-sponsor-title">BECOME A <span>SPONSOR</span></div>
+  <p class="become-sponsor-desc">Interested in partnering with Sahara Gunners FC? Get your brand in front of Buffalo's passionate football community.</p>
+  <button class="become-sponsor-btn" onclick="openContactModal()">✉ Get In Touch</button>
+</div>
+
+<!-- ─── CONTACT MODAL ─── -->
+<div class="contact-modal-overlay" id="contactModalOverlay">
+  <div class="contact-modal">
+    <button class="contact-modal-close" id="contactModalClose">✕</button>
+    <div class="contact-modal-header">
+      <div class="contact-modal-tag">✦ Reach Out</div>
+      <div class="contact-modal-title">GET IN <span>TOUCH</span></div>
+      <p class="contact-modal-sub">Interested in sponsoring Sahara Gunners FC? Contact us through any of the channels below.</p>
+    </div>
+    <div class="contact-links">
+      <a class="contact-link email" href="/cdn-cgi/l/email-protection#345f1a59515a46050d744d555c5b5b1a575b59">
+        <div class="contact-link-icon">✉</div>
+        <div class="contact-link-info">
+          <div class="contact-link-label">Email Us</div>
+          <div class="contact-link-value"><span class="__cf_email__" data-cfemail="4b2065262e25397a720b322a23242465282426">[email&#160;protected]</span></div>
+        </div>
+        <div class="contact-link-arrow">→</div>
+      </a>
+      <a class="contact-link instagram" href="https://www.instagram.com/sahara_gunners_fc?igsh=bWRnNW11NW5xanRo" target="_blank">
+        <div class="contact-link-icon"><img src="instaicon.svg" alt="Instagram" style="width:28px;height:28px;object-fit:contain;border-radius:6px;"></div>
+        <div class="contact-link-info">
+          <div class="contact-link-label">Instagram</div>
+          <div class="contact-link-value">@sahara_gunners_fc</div>
+        </div>
+        <div class="contact-link-arrow">→</div>
+      </a>
+      <a class="contact-link facebook" href="https://www.facebook.com/share/1BgADUo9LS/?mibextid=wwXIfr" target="_blank">
+        <div class="contact-link-icon"><img src="faceicon.png" alt="Facebook" style="width:28px;height:28px;object-fit:contain;border-radius:6px;"></div>
+        <div class="contact-link-info">
+          <div class="contact-link-label">Facebook</div>
+          <div class="contact-link-value">Sahara Gunners FC</div>
+        </div>
+        <div class="contact-link-arrow">→</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-brand">Sahara Gunners FC</div>
+  <div class="footer-links">
+    <a href="ourteam.html">Editor: M. Bijjo</a>
+    <a href="/cdn-cgi/l/email-protection#513c2439303c3c3435333860606811363c30383d7f323e3c">✉ Email</a>
+    <a href="https://www.instagram.com/m.bijjo" target="_blank"> Instagram</a>
+  </div>
+  <div class="footer-copy">© <span id="year"></span> Sahara Gunners — All rights reserved.</div>
+</footer>
+
+<!-- ─── MODAL ─── -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" id="modal">
+    <button class="modal-close" id="modalClose">✕</button>
+    <div id="modalBanner"></div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// ─── SPONSOR DATA ───
+// Bilgileri sonradan doldurmak için "info" alanı boş bırakıldı
+var sponsors = {
+  molina: {
+    tier: 'gold',
+    name: 'Molina Healthcare',
+    img: 'Sponsors/Molina-Healthcare.png',
+    tagline: 'Title Sponsor of Sahara Gunners FC',
+    info: { type: 'Healthcare', location: '3435 Bailey Ave North Building, Buffalo, NY 14215' },
+    about: 'Molina Healthcare is the proud title sponsor of Sahara Gunners FC, supporting the growth of amateur football in Buffalo and the surrounding community.',
+    website: 'https://www.molinahealthcare.com'
+  },
+  sahara_hookah: {
+    tier: 'partner',
+    name: 'Sahara Hookah Lounge',
+    img: 'https://i.ibb.co/3Y0Qff5q/IMG-3717.png',
+    tagline: 'Official Partner',
+    info: { type: 'Hospitality', location: '1177 Hertel Ave, Buffalo, NY 14216' },
+    about: 'Sahara Hookah Lounge is a proud official partner of Sahara Gunners FC.',
+    website: null
+  },
+  cheerleaderbflo: {
+    tier: 'partner',
+    name: 'BFLO Cheerleaders',
+    img: 'Sponsors/cheerleaderbflo.PNG',
+    tagline: 'Official Partner',
+    info: { type: 'Cheerleading', location: 'Buffalo, NY' },
+    about: '',
+    phone: '(716) 444-2608',
+    email: 'bflocheerleaders@gmail.com',
+    website: 'http://www.BFLOcheerleaders.com'
+  },
+  kovan: {
+    tier: 'partner',
+    name: 'KM7 Fashion',
+    img: 'Sponsors/Kovan.png',
+    tagline: 'Official Partner',
+    info: { type: 'Fashion', location: '3550 Main St, Buffalo, NY 14226' },
+    about: '',
+    phone: '(716) 328-8989',
+    website: null
+  },
+  buffalo_soccer_alliance: {
+    tier: 'partner',
+    name: 'Buffalo Soccer Alliance',
+    img: 'Sponsors/Buffalo-Soccer-Alliance.png',
+    tagline: 'Official Partner',
+    info: { type: 'Sports Organization', location: 'Buffalo, NY' },
+    about: 'All things Buffalo Soccer including Exclusive Gunners FC coverage!',
+    website: null
+  },
+  golden_hour: {
+    tier: 'partner',
+    name: 'Golden Hour Treats & Things',
+    img: 'Sponsors/Golden-Hour-Treats-And-Things.png',
+    tagline: 'Official Partner',
+    info: { type: 'Food & Treats', location: '735 Sycamore St, Buffalo, NY 14212' },
+    about: '',
+    phone: '(716) 768-7486',
+    website: null
+  },
+  penalty_box: {
+    tier: 'partner',
+    name: 'The Penalty Box',
+    img: 'Sponsors/The-Penalty-Box-Sports-Bar-And-Grill.png',
+    tagline: 'Sports Bar & Grill — Official Partner',
+    info: { type: 'Sports Bar & Grill', location: '34 Chestnut St, Lockport, NY 14094' },
+    about: '',
+    phone: '(716) 727-0993',
+    website: 'https://order.toasttab.com/online/penaltybox'
+  },
+  lockedin: {
+    tier: 'partner',
+    name: 'Locked In Sports Cards',
+    img: 'Sponsors/lockedin.PNG',
+    tagline: 'Official Partner',
+    info: { type: '', location: 'Buffalo, NY' },
+    about: '',
+    website: 'https://www.facebook.com/share/g/1Rf7Yd8zeA/?mibextid=wwXIfr'
+  },
+  chasing_ms: {
+    tier: 'partner',
+    name: 'The Chasing MS Foundation',
+    img: 'Sponsors/The-Chasing-Ms-Foundation-Charitable-Fund.png',
+    tagline: 'Charitable Fund — Official Partner',
+    info: { type: 'Charitable Foundation', location: 'Buffalo, NY' },
+    about: '',
+    website: 'https://www.chasingmsfoundation.org'
+  },
+  alibab_kebab: {
+    tier: 'partner',
+    name: 'Alibaba Kebob',
+    img: 'Sponsors/Alibab-Kebab.png',
+    tagline: 'Halal Buffalo — Official Partner',
+    info: { type: 'Restaurant', location: 'Buffalo, NY' },
+    about: 'Halal Buffalo',
+    website: 'https://alibaba-kebab.com'
+  },
+  lockport_soccer: {
+    tier: 'partner',
+    name: 'Lockport Soccer Club',
+    img: 'Sponsors/Lockport-Soccer-Club.png',
+    tagline: 'Official Partner',
+    info: { type: 'Youth Club & Travel Soccer', location: 'Lockport, NY' },
+    about: '',
+    website: 'http://www.lockportsoccerclub.com'
+  },
+  webr_radio: {
+    tier: 'partner',
+    name: 'WEBR Radio Buffalo',
+    img: 'Sponsors/WEBR-Radio.png',
+    tagline: 'AM 1440 / FM 105.3 — Official Partner',
+    info: { type: 'Radio Station', location: 'Buffalo, NY' },
+    about: '',
+    website: 'https://webrradio.com'
+  },
+  trackbudgetbuild: {
+    tier: 'partner',
+    name: 'TrackBudgetBuild Finances',
+    img: 'Sponsors/TrackBudgetBuild-Finances.png',
+    tagline: 'Official Partner',
+    info: { type: 'Finance', location: 'Buffalo, NY' },
+    about: '',
+    website: 'https://trackbudgetbuild.com'
+  }
+};
+
+// ─── PARTNER CARDS ───
+var partnerOrder = [
+  'sahara_hookah',
+  'cheerleaderbflo',
+  'kovan',
+  'buffalo_soccer_alliance',
+  'golden_hour',
+  'penalty_box',
+  'lockedin',
+  'chasing_ms',
+  'alibab_kebab',
+  'lockport_soccer',
+  'webr_radio',
+  'trackbudgetbuild'
+];
+
+var grid = document.getElementById('partnerGrid');
+partnerOrder.forEach(function(key, i) {
+  var s = sponsors[key];
+  var card = document.createElement('div');
+  card.className = 'partner-card';
+  card.style.animationDelay = (0.08 + i * 0.07) + 's';
+  card.innerHTML =
+    '<div class="partner-logo"><img src="' + s.img + '" alt="' + s.name + '"></div>' +
+    '<div class="partner-name">' + s.name + '</div>' +
+    '<div class="partner-label">' + s.tagline + '</div>' +
+    '<div class="partner-click-hint">▶ View details</div>';
+  card.addEventListener('click', function(){ openModal(key); });
+  grid.appendChild(card);
+});
+
+// ─── MODAL ───
+var overlay = document.getElementById('modalOverlay');
+var modalClose = document.getElementById('modalClose');
+
+function openModal(key) {
+  var s = sponsors[key];
+  var isGold = s.tier === 'gold';
+
+  // Banner
+  var bannerEl = document.getElementById('modalBanner');
+  var bannerClass = isGold ? 'modal-banner-gold' : 'modal-banner-partner';
+  bannerEl.innerHTML = '<div class="' + bannerClass + '"><img src="' + s.img + '" alt="' + s.name + '"></div>';
+
+  // Body
+  var tierLabel = isGold ? '<div class="modal-tier gold">⭐ Title Sponsor</div>' : '<div class="modal-tier partner">✦ Official Partner</div>';
+
+  var infoHTML = '';
+  if (s.info) {
+    var infoItems = [];
+    if (s.info.type) infoItems.push('<div class="modal-info-item"><div class="modal-info-label">Industry</div><div class="modal-info-value">' + s.info.type + '</div></div>');
+    if (s.info.location) infoItems.push('<div class="modal-info-item"><div class="modal-info-label">Location</div><div class="modal-info-value">' + s.info.location + '</div></div>');
+    if (s.phone) infoItems.push('<div class="modal-info-item"><div class="modal-info-label">Phone</div><div class="modal-info-value">' + s.phone + '</div></div>');
+    if (s.email) infoItems.push('<div class="modal-info-item"><div class="modal-info-label">Email</div><div class="modal-info-value">' + s.email + '</div></div>');
+    if (infoItems.length > 0) infoHTML = '<div class="modal-info-grid">' + infoItems.join('') + '</div>';
+  }
+
+  var aboutHTML = '';
+  if (s.about) {
+    aboutHTML = '<div class="modal-about-label">About</div><p class="modal-about-text">' + s.about + '</p>';
+  } else {
+    aboutHTML = '<div class="modal-about-label">About</div><p class="modal-about-text" style="font-style:italic;opacity:0.5;">Information coming soon.</p>';
+  }
+
+  var btnHTML = s.website
+    ? '<a class="modal-website-btn" href="' + s.website + '" target="_blank">🌐 Visit Website</a>'
+    : '<span class="modal-coming-soon">More info coming soon</span>';
+
+  document.getElementById('modalBody').innerHTML =
+    tierLabel +
+    '<div class="modal-sponsor-name">' + s.name + '</div>' +
+    '<div class="modal-sponsor-tagline">' + s.tagline + '</div>' +
+    '<div class="modal-divider"></div>' +
+    infoHTML +
+    aboutHTML +
+    btnHTML;
+
+  overlay.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+  requestAnimationFrame(function(){ overlay.classList.add('visible'); });
+}
+
+function closeModal() {
+  overlay.classList.remove('visible');
+  setTimeout(function(){
+    overlay.style.display = 'none';
+    document.body.style.overflow = '';
+  }, 300);
+}
+
+modalClose.addEventListener('click', closeModal);
+overlay.addEventListener('click', function(e){ if (e.target === overlay) closeModal(); });
+document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeModal(); });
+
+
+
+// ─── CONTACT MODAL ───
+var contactOverlay = document.getElementById('contactModalOverlay');
+var contactClose = document.getElementById('contactModalClose');
+
+function openContactModal() {
+  contactOverlay.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+  requestAnimationFrame(function(){ contactOverlay.classList.add('visible'); });
+}
+function closeContactModal() {
+  contactOverlay.classList.remove('visible');
+  setTimeout(function(){
+    contactOverlay.style.display = 'none';
+    document.body.style.overflow = '';
+  }, 300);
+}
+contactClose.addEventListener('click', closeContactModal);
+contactOverlay.addEventListener('click', function(e){ if (e.target === contactOverlay) closeContactModal(); });
+document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeContactModal(); });
+
+var mobileToggle = document.getElementById('mobileToggle');
+var mobilePanel = document.getElementById('mobilePanel');
+mobileToggle.addEventListener('click', function() {
+  mobilePanel.classList.toggle('open');
+  mobileToggle.textContent = mobilePanel.classList.contains('open') ? 'X' : '☰';
+});
+</script>
+</body>
+</html>
