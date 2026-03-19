@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en" translate="no">
+<head>
+<meta charset="utf-8"/>
+<meta name="google" content="notranslate">
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+<meta name="description" content="Latest news and announcements from Sahara Gunners FC, Buffalo football club.">
+<meta name="keywords" content="Sahara Gunners, Sahara Gunners FC, Buffalo soccer, Buffalo football, amateur soccer Buffalo NY">
+<meta name="robots" content="index, follow">
+<title>Announcements — Sahara Gunners FC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0a0812;
+  --card: rgba(255,255,255,0.04);
+  --border: rgba(255,255,255,0.08);
+  --accent: #00e5ff;
+  --accent2: #ff6b35;
+  --gold: #f5c842;
+  --text: #f0eefc;
+  --muted: #7b7a96;
+  --nav-h: 72px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--text); font-family: 'Barlow', sans-serif; min-height: 100vh; overflow-x: hidden; }
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  background-size: 200px 200px; pointer-events: none; z-index: 0; opacity: 0.6;
+}
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 2px; }
+
+header {
+  position: fixed; top: 0; left: 0; right: 0; height: var(--nav-h); z-index: 100;
+  display: flex; align-items: center; justify-content: space-between; padding: 0 40px;
+  background: rgba(10,8,18,0.7); backdrop-filter: blur(24px); border-bottom: 1px solid var(--border);
+}
+.brand { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+.brand-logo { width: 44px; height: 44px; border-radius: 50%; border: 2px solid var(--accent); box-shadow: 0 0 16px rgba(0,229,255,0.3); object-fit: cover; transition: box-shadow 0.3s; }
+.brand:hover .brand-logo { box-shadow: 0 0 28px rgba(0,229,255,0.6); }
+.brand-name { font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 2px; color: #fff; line-height: 1; }
+.brand-sub { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; letter-spacing: 3px; color: var(--accent); text-transform: uppercase; }
+.nav-divider { width: 1px; height: 32px; background: var(--border); margin: 0 8px; }
+.sponsor-nav img { height: 28px; width: auto; opacity: 0.8; transition: opacity 0.2s; cursor: pointer; }
+.sponsor-nav img:hover { opacity: 1; }
+nav.main-nav { display: flex; align-items: center; gap: 4px; }
+nav.main-nav a {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 600;
+  letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); text-decoration: none;
+  padding: 8px 14px; border-radius: 6px; transition: color 0.2s, background 0.2s;
+}
+nav.main-nav a:hover { color: var(--text); background: var(--card); }
+nav.main-nav a.active { color: var(--accent); background: var(--card); }
+.nav-live {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase;
+  background: linear-gradient(135deg, var(--accent2), #ff9a60);
+  color: #fff; border: none; padding: 8px 18px; border-radius: 6px;
+  cursor: pointer; display: flex; align-items: center; gap: 6px;
+  transition: transform 0.15s, box-shadow 0.2s; box-shadow: 0 0 20px rgba(255,107,53,0.35);
+}
+.nav-live:hover { transform: scale(1.04); box-shadow: 0 0 30px rgba(255,107,53,0.5); }
+.live-dot { width: 7px; height: 7px; background: #fff; border-radius: 50%; animation: pulse-dot 1.4s ease-in-out infinite; }
+@keyframes pulse-dot { 0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.4;transform:scale(0.7);} }
+.mobile-toggle { display: none; background: none; border: 1px solid var(--border); color: var(--text); font-size: 20px; padding: 6px 12px; border-radius: 6px; cursor: pointer; }
+.mobile-panel {
+  display: none; position: fixed; top: var(--nav-h); right: 0; left: 0;
+  background: rgba(10,8,18,0.97); backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border); padding: 20px; flex-direction: column; gap: 4px; z-index: 99;
+}
+.mobile-panel.open { display: flex; }
+.mobile-panel a, .mobile-panel button {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 600;
+  letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted);
+  text-decoration: none; background: none; border: none;
+  padding: 12px 16px; border-radius: 8px; text-align: left; cursor: pointer;
+  transition: color 0.2s, background 0.2s;
+}
+.mobile-panel a:hover, .mobile-panel button:hover { color: var(--accent); background: var(--card); }
+
+.page-hero { position: relative; padding: calc(var(--nav-h) + 80px) 60px 70px; overflow: hidden; }
+.page-hero-bg {
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 70% 0%, rgba(0,229,255,0.07) 0%, transparent 55%),
+              radial-gradient(ellipse at 15% 100%, rgba(255,107,53,0.04) 0%, transparent 50%);
+  pointer-events: none;
+}
+.particle { position: absolute; border-radius: 50%; pointer-events: none; animation: float-particle linear infinite; opacity: 0; }
+@keyframes float-particle { 0%{transform:translateY(0);opacity:0;}10%{opacity:0.6;}90%{opacity:0.3;}100%{transform:translateY(-120px);opacity:0;} }
+.page-hero-inner { position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; }
+.page-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(0,229,255,0.1); border: 1px solid rgba(0,229,255,0.25);
+  color: var(--accent); font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase;
+  padding: 6px 14px; border-radius: 4px; margin-bottom: 20px; animation: fade-up 0.7s ease both;
+}
+.tag-dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; }
+.page-title {
+  font-family: 'Bebas Neue', sans-serif; font-size: clamp(56px, 7vw, 96px);
+  line-height: 0.92; letter-spacing: 2px; color: #fff;
+  animation: fade-up 0.7s 0.08s ease both; margin-bottom: 20px;
+}
+.page-title .accent-word { color: var(--accent); }
+.page-desc { font-size: 16px; font-weight: 300; line-height: 1.7; color: var(--muted); max-width: 480px; animation: fade-up 0.7s 0.16s ease both; }
+
+.divider-line { position: relative; z-index: 2; height: 1px; background: var(--border); margin: 0 40px; }
+
+.content-wrap {
+  position: relative; z-index: 2; max-width: 1100px; margin: 0 auto;
+  padding: 70px 40px 80px; display: grid; grid-template-columns: 1fr 300px; gap: 50px; align-items: start;
+}
+
+.announcements-list { display: flex; flex-direction: column; }
+.ann-card {
+  display: flex; padding: 32px 0; border-bottom: 1px solid var(--border); cursor: pointer;
+  opacity: 0; transform: translateX(-30px); transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.ann-card.in-view { opacity: 1; transform: translateX(0); }
+.ann-card:first-child { padding-top: 0; }
+.ann-card:last-child { border-bottom: none; }
+.ann-timeline { display: flex; flex-direction: column; align-items: center; width: 60px; flex-shrink: 0; padding-top: 4px; }
+.ann-dot {
+  width: 12px; height: 12px; border-radius: 50%; background: var(--border);
+  border: 2px solid var(--muted); flex-shrink: 0; transition: background 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+.ann-card:hover .ann-dot, .ann-card.expanded .ann-dot { background: var(--accent); border-color: var(--accent); box-shadow: 0 0 12px rgba(0,229,255,0.5); }
+.ann-line { width: 1px; flex: 1; min-height: 20px; background: var(--border); margin-top: 6px; }
+.ann-card:last-child .ann-line { display: none; }
+.ann-inner { flex: 1; padding-right: 20px; }
+.ann-meta { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; flex-wrap: wrap; }
+.ann-category { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; padding: 3px 10px; border-radius: 4px; }
+.cat-news  { color: var(--accent);  background: rgba(0,229,255,0.1);  border: 1px solid rgba(0,229,255,0.2); }
+.cat-match { color: var(--accent2); background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.2); }
+.cat-squad { color: var(--gold);    background: rgba(245,200,66,0.1); border: 1px solid rgba(245,200,66,0.2); }
+.ann-date { font-family: 'Barlow Condensed', sans-serif; font-size: 12px; letter-spacing: 1px; color: var(--muted); }
+.ann-title { font-family: 'Barlow Condensed', sans-serif; font-size: 22px; font-weight: 700; color: var(--text); margin-bottom: 8px; line-height: 1.2; transition: color 0.2s; }
+.ann-card:hover .ann-title { color: var(--accent); }
+.ann-preview { font-size: 14px; font-weight: 300; line-height: 1.7; color: var(--muted); }
+.ann-body { font-size: 14px; font-weight: 300; line-height: 1.8; color: var(--muted); max-height: 0; overflow: hidden; opacity: 0; transition: max-height 0.5s ease, opacity 0.4s; }
+.ann-card.expanded .ann-body { max-height: 300px; opacity: 1; }
+.ann-card.expanded .ann-preview { display: none; }
+.ann-toggle { display: flex; align-items: center; gap: 6px; margin-top: 12px; font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); }
+.ann-toggle-icon { transition: transform 0.3s; }
+.ann-card.expanded .ann-toggle-icon { transform: rotate(45deg); }
+
+.sidebar { display: flex; flex-direction: column; gap: 20px; }
+.info-card {
+  background: var(--card); border: 1px solid var(--border); border-radius: 16px; overflow: hidden;
+  opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease, border-color 0.2s;
+}
+.info-card.in-view { opacity: 1; transform: translateY(0); }
+.info-card:hover { border-color: rgba(0,229,255,0.15); }
+.info-card-header { padding: 14px 20px; border-bottom: 1px solid var(--border); font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); }
+.info-card-body { padding: 20px; }
+
+.ticker-list { display: flex; flex-direction: column; }
+.ticker-item { display: flex; gap: 12px; align-items: flex-start; padding: 11px 0; border-bottom: 1px solid var(--border); }
+.ticker-item:last-child { border-bottom: none; }
+.ticker-dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; flex-shrink: 0; margin-top: 5px; }
+.ticker-text { font-size: 13px; font-weight: 300; line-height: 1.5; color: var(--muted); }
+.ticker-text strong { color: var(--text); font-weight: 500; }
+
+.mini-stat { background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 10px; padding: 14px; text-align: center; }
+.mini-stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 32px; color: var(--gold); line-height: 1; margin-bottom: 4px; }
+.mini-stat-label { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); }
+
+.contact-link {
+  display: flex; align-items: center; gap: 10px; text-decoration: none;
+  padding: 10px; border-radius: 8px; background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border); transition: border-color 0.2s; margin-bottom: 8px;
+}
+.contact-link:last-child { margin-bottom: 0; }
+.contact-link:hover { border-color: rgba(0,229,255,0.3); }
+.contact-link img { width: 18px; height: 18px; object-fit: contain; flex-shrink: 0; }
+.contact-link span { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; letter-spacing: 1px; color: var(--muted); text-transform: uppercase; }
+
+footer {
+  position: relative; z-index: 2; margin: 0 40px; padding: 28px 0;
+  border-top: 1px solid var(--border);
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+}
+.footer-brand { font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: 3px; color: var(--muted); }
+.footer-links { display: flex; gap: 20px; align-items: center; }
+.footer-links a { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; letter-spacing: 1px; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: var(--accent); }
+.footer-copy { font-size: 12px; color: var(--muted); font-family: 'Barlow Condensed', sans-serif; letter-spacing: 1px; }
+
+@keyframes fade-up { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+@media (max-width: 900px) {
+  .content-wrap { grid-template-columns: 1fr; padding: 40px 24px 60px; }
+  .sidebar { order: -1; }
+  .page-hero { padding: calc(var(--nav-h) + 40px) 24px 40px; }
+  nav.main-nav { display: none; }
+  .mobile-toggle { display: flex; }
+  .sponsor-nav, .nav-divider { display: none; }
+  header { padding: 0 20px; }
+  .divider-line { margin: 0 20px; }
+  footer { margin: 0 20px; }
+}
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KDMVY7QSPF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KDMVY7QSPF');
+</script>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+
+<header>
+  <a class="brand" href="index.html">
+    <img class="brand-logo" src="https://i.ibb.co/Fq0yCBwB/IMG-3678.png" alt="Sahara Gunners">
+    <div>
+      <div class="brand-name">Sahara Gunners</div>
+      <div class="brand-sub">Football Club</div>
+    </div>
+  </a>
+  <div style="display:flex;align-items:center;gap:8px;margin-right:auto;margin-left:20px;">
+    <div class="nav-divider"></div>
+    <div class="sponsor-nav" onclick="location.href='sponsors.html'" style="cursor:pointer;">
+      <img src="https://i.ibb.co/3Y0Qff5q/IMG-3717.png" alt="Sponsor">
+    </div>
+  </div>
+  <nav class="main-nav">
+    <a href="players.html">Players</a>
+    <a href="announcements.html" class="active">Announcements</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About</a>
+    <a href="sponsors.html">Sponsors</a>
+    <a href="ourteam.html">Our Team</a>
+    <button class="nav-live" onclick="location.href='live.html'">
+      <span class="live-dot"></span> Live
+    </button>
+  </nav>
+  <button class="mobile-toggle" id="mobileToggle">&#9776;</button>
+</header>
+
+<div class="mobile-panel" id="mobilePanel">
+  <a href="players.html">Players</a>
+  <a href="announcements.html">Announcements</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="about.html">About</a>
+  <a href="sponsors.html">Sponsors</a>
+  <a href="ourteam.html">Our Team</a>
+  <button onclick="location.href='live.html'" style="color:#fff;background:var(--accent2);padding:12px;border-radius:8px;border:none;cursor:pointer;font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;letter-spacing:2px;">Live</button>
+</div>
+
+<section class="page-hero" id="pageHero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-inner">
+    <div class="page-tag"><span class="tag-dot"></span> Latest News &amp; Updates</div>
+    <h1 class="page-title">ANNOUNCE<br><span class="accent-word">MENTS</span></h1>
+    <p class="page-desc">Stay up to date with the latest news, match updates, and club announcements from Sahara Gunners FC.</p>
+  </div>
+</section>
+
+<div class="divider-line"></div>
+
+<div class="content-wrap">
+
+  <div class="announcements-list">
+
+    <!-- No announcements yet -->
+    <div class="ann-card in-view" style="border-bottom:none; padding: 60px 0; display:flex; flex-direction:column; align-items:center; text-align:center; cursor:default;">
+      <div style="font-size:56px; opacity:0.15; margin-bottom:24px;">📢</div>
+      <div style="font-family:'Bebas Neue',sans-serif; font-size:32px; letter-spacing:2px; color:var(--text); margin-bottom:12px;">NO ANNOUNCEMENTS YET</div>
+      <div style="font-family:'Barlow Condensed',sans-serif; font-size:15px; font-weight:300; color:var(--muted); max-width:400px; line-height:1.8;">
+        All club announcements, match updates, and news will be posted here. Stay tuned — big things are coming for Sahara Gunners FC!
+      </div>
+      <div style="margin-top:28px; display:inline-flex; align-items:center; gap:8px; background:rgba(0,229,255,0.08); border:1px solid rgba(0,229,255,0.2); color:var(--accent); font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:3px; text-transform:uppercase; padding:8px 18px; border-radius:6px;">
+        ✦ Check back soon
+      </div>
+    </div>
+
+  </div>
+
+  <div class="sidebar">
+
+    <div class="info-card in-view" data-delay="0">
+      <div class="info-card-header">Quick Updates</div>
+      <div class="info-card-body">
+        <div class="ticker-list">
+          <div class="ticker-item">
+            <div class="ticker-dot"></div>
+            <div class="ticker-text"><strong>Announcements</strong> &mdash; Coming soon</div>
+          </div>
+          <div class="ticker-item">
+            <div class="ticker-dot" style="background:var(--accent2)"></div>
+            <div class="ticker-text"><strong>Next match</strong> &mdash; TBA</div>
+          </div>
+          <div class="ticker-item">
+            <div class="ticker-dot" style="background:var(--gold)"></div>
+            <div class="ticker-text"><strong>Stay tuned</strong> &mdash; Big things ahead</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-card in-view" data-delay="150">
+      <div class="info-card-header">Contact the Club</div>
+      <div class="info-card-body">
+        <a class="contact-link" href="/cdn-cgi/l/email-protection#bcd792d1d9d2ce8d85fcc5ddd4d3d392dfd3d1">
+          <span style="font-size:16px;">✉</span>
+          <span><span class="__cf_email__" data-cfemail="c7ace9aaa2a9b5f6fe87bea6afa8a8e9a4a8aa">[email&#160;protected]</span></span>
+        </a>
+        <a class="contact-link" href="https://www.instagram.com/sahara_gunners_fc?igsh=bWRnNW11NW5xanRo" target="_blank">
+          <img src="instaicon.svg" alt="Instagram" style="width:18px;height:18px;object-fit:contain;border-radius:4px;">
+          <span>@sahara_gunners_fc</span>
+        </a>
+        <a class="contact-link" href="https://www.facebook.com/share/1BgADUo9LS/?mibextid=wwXIfr" target="_blank">
+          <img src="faceicon.png" alt="Facebook" style="width:18px;height:18px;object-fit:contain;border-radius:4px;">
+          <span>Sahara Gunners FC</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-brand">Sahara Gunners FC</div>
+  <div class="footer-links">
+    <a href="ourteam.html">Editor: M. Bijjo</a>
+    <a href="/cdn-cgi/l/email-protection#8ce1f9e4ede1e1e9e8eee5bdbdb5ccebe1ede5e0a2efe3e1">Email</a>
+    <a href="https://www.instagram.com/m.bijjo" target="_blank">Instagram</a>
+  </div>
+  <div class="footer-copy">&#169; <span id="year"></span> Sahara Gunners &mdash; All rights reserved.</div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+
+
+var observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
+    if (entry.isIntersecting) {
+      var delay = entry.target.dataset.delay || 0;
+      setTimeout(function() { entry.target.classList.add('in-view'); }, parseInt(delay));
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.ann-card, .info-card').forEach(function(el) { observer.observe(el); });
+
+document.querySelectorAll('.ann-card').forEach(function(card) {
+  card.addEventListener('click', function() {
+    var isOpen = card.classList.contains('expanded');
+    document.querySelectorAll('.ann-card').forEach(function(c) { c.classList.remove('expanded'); });
+    if (!isOpen) card.classList.add('expanded');
+  });
+});
+
+var hero = document.getElementById('pageHero');
+var colors = ['rgba(0,229,255,0.7)', 'rgba(255,107,53,0.6)', 'rgba(245,200,66,0.6)'];
+for (var i = 0; i < 16; i++) {
+  var p = document.createElement('div');
+  p.className = 'particle';
+  var size = Math.random() * 4 + 2;
+  p.style.width = size + 'px';
+  p.style.height = size + 'px';
+  p.style.left = (Math.random() * 100) + '%';
+  p.style.bottom = (Math.random() * 40) + '%';
+  p.style.background = colors[Math.floor(Math.random() * colors.length)];
+  p.style.animationDuration = (Math.random() * 6 + 4) + 's';
+  p.style.animationDelay = (Math.random() * 4) + 's';
+  hero.appendChild(p);
+}
+
+
+
+
+var mobileToggle = document.getElementById('mobileToggle');
+var mobilePanel = document.getElementById('mobilePanel');
+mobileToggle.addEventListener('click', function() {
+  mobilePanel.classList.toggle('open');
+  mobileToggle.textContent = mobilePanel.classList.contains('open') ? 'X' : '☰';
+});
+</script>
+</body>
+</html>
